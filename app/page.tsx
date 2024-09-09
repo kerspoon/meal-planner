@@ -7,24 +7,39 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 
-const mealTypes = ['breakfast', 'lunch', 'dinner', 'dessert'];
 
-const mealColors = {
+enum MealType {
+  Breakfast = 'breakfast',
+  Lunch = 'lunch',
+  Dinner = 'dinner',
+  Dessert = 'dessert'
+}
+
+const mealColors: Record<MealType, string> = {
   breakfast: 'bg-yellow-200',
   lunch: 'bg-green-200',
   dinner: 'bg-blue-200',
   dessert: 'bg-purple-200'
 };
 
-const recipes = [
-  { id: 1, name: 'Oatmeal', type: 'breakfast', ingredients: [{ name: 'Oats', quantity: '1 cup' }, { name: 'Milk', quantity: '1 cup' }, { name: 'Banana', quantity: '1' }] },
-  { id: 2, name: 'Avocado Toast', type: 'breakfast', ingredients: [{ name: 'Bread', quantity: '2 slices' }, { name: 'Avocado', quantity: '1' }, { name: 'Eggs', quantity: '2' }] },
-  { id: 3, name: 'Chicken Salad', type: 'lunch', ingredients: [{ name: 'Chicken', quantity: '200g' }, { name: 'Lettuce', quantity: '1 cup' }, { name: 'Tomato', quantity: '1' }, { name: 'Cucumber', quantity: '1/2' }] },
-  { id: 4, name: 'Veggie Wrap', type: 'lunch', ingredients: [{ name: 'Tortilla', quantity: '1' }, { name: 'Hummus', quantity: '2 tbsp' }, { name: 'Mixed Vegetables', quantity: '1 cup' }] },
-  { id: 5, name: 'Spaghetti Bolognese', type: 'dinner', ingredients: [{ name: 'Spaghetti', quantity: '200g' }, { name: 'Ground Beef', quantity: '300g' }, { name: 'Tomato Sauce', quantity: '1 cup' }] },
-  { id: 6, name: 'Grilled Salmon', type: 'dinner', ingredients: [{ name: 'Salmon Fillet', quantity: '200g' }, { name: 'Lemon', quantity: '1' }, { name: 'Asparagus', quantity: '1 bunch' }] },
-  { id: 7, name: 'Fruit Parfait', type: 'dessert', ingredients: [{ name: 'Yogurt', quantity: '1 cup' }, { name: 'Mixed Berries', quantity: '1 cup' }, { name: 'Granola', quantity: '1/4 cup' }] },
-  { id: 8, name: 'Chocolate Mousse', type: 'dessert', ingredients: [{ name: 'Dark Chocolate', quantity: '100g' }, { name: 'Heavy Cream', quantity: '1 cup' }, { name: 'Eggs', quantity: '2' }] },
+const recipes:
+{
+  id: number;
+  name: string;
+  type: MealType;
+  ingredients: {
+      name: string;
+      quantity: string;
+  }[];
+}[] = [
+  { id: 1, name: 'Oatmeal', type: MealType.Breakfast, ingredients: [{ name: 'Oats', quantity: '1 cup' }, { name: 'Milk', quantity: '1 cup' }, { name: 'Banana', quantity: '1' }] },
+  { id: 2, name: 'Avocado Toast', type: MealType.Breakfast, ingredients: [{ name: 'Bread', quantity: '2 slices' }, { name: 'Avocado', quantity: '1' }, { name: 'Eggs', quantity: '2' }] },
+  { id: 3, name: 'Chicken Salad', type: MealType.Lunch, ingredients: [{ name: 'Chicken', quantity: '200g' }, { name: 'Lettuce', quantity: '1 cup' }, { name: 'Tomato', quantity: '1' }, { name: 'Cucumber', quantity: '1/2' }] },
+  { id: 4, name: 'Veggie Wrap', type: MealType.Lunch, ingredients: [{ name: 'Tortilla', quantity: '1' }, { name: 'Hummus', quantity: '2 tbsp' }, { name: 'Mixed Vegetables', quantity: '1 cup' }] },
+  { id: 5, name: 'Spaghetti Bolognese', type: MealType.Dinner, ingredients: [{ name: 'Spaghetti', quantity: '200g' }, { name: 'Ground Beef', quantity: '300g' }, { name: 'Tomato Sauce', quantity: '1 cup' }] },
+  { id: 6, name: 'Grilled Salmon', type: MealType.Dinner, ingredients: [{ name: 'Salmon Fillet', quantity: '200g' }, { name: 'Lemon', quantity: '1' }, { name: 'Asparagus', quantity: '1 bunch' }] },
+  { id: 7, name: 'Fruit Parfait', type: MealType.Dessert, ingredients: [{ name: 'Yogurt', quantity: '1 cup' }, { name: 'Mixed Berries', quantity: '1 cup' }, { name: 'Granola', quantity: '1/4 cup' }] },
+  { id: 8, name: 'Chocolate Mousse', type: MealType.Dessert, ingredients: [{ name: 'Dark Chocolate', quantity: '100g' }, { name: 'Heavy Cream', quantity: '1 cup' }, { name: 'Eggs', quantity: '2' }] },
 ];
 
 enum DaysOfWeek {
@@ -89,12 +104,12 @@ const AutocompleteMeal = ({ day, meals, setMeals }) => {
   );
 };
 
-const DayPlanner = ({ day, meals, setMeals }) => {
-  const onDragOver = (e) => {
+const DayPlanner = ({ day, meals, setMeals }: {day: DaysOfWeek, meals: any, setMeals: any}) => {
+  const onDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
-  const onDrop = (e) => {
+  const onDrop = (e: { dataTransfer: { getData: (arg0: string) => any; }; }) => {
     const recipeId = e.dataTransfer.getData('recipeId');
     const recipe = recipes.find(r => r.id === parseInt(recipeId));
     if (recipe) {
@@ -140,36 +155,27 @@ const DayPlanner = ({ day, meals, setMeals }) => {
 };
 
 const RecipeList = () => {
-  const onDragStart = (e, recipeId) => {
-    e.dataTransfer.setData('recipeId', recipeId);
+  const onDragStart = (e: React.DragEvent<HTMLDivElement>, recipeId: number) => {
+    e.dataTransfer.setData('recipeId', recipeId.toString());
   };
 
   return (
-    <Tabs defaultValue="breakfast">
-      <TabsList>
-        {mealTypes.map(type => (
-          <TabsTrigger key={type} value={type}>{type}</TabsTrigger>
-        ))}
-      </TabsList>
-      {mealTypes.map(type => (
-        <TabsContent key={type} value={type}>
-          {recipes.filter(recipe => recipe.type === type).map(recipe => (
+    <div className="grid grid-cols-1 gap-4">
+      {recipes.map(recipe => (
             <div
-              key={recipe.id}
-              draggable
-              onDragStart={(e) => onDragStart(e, recipe.id)}
-              className={`mb-2 p-2 bg-gray-100 rounded cursor-move ${mealColors[recipe.type]}`}
-            >
-              {recipe.name}
-            </div>
-          ))}
-        </TabsContent>
+            key={recipe.id}
+            draggable
+            onDragStart={(e) => onDragStart(e, recipe.id)}
+            className={`mb-2 p-2 bg-gray-100 rounded cursor-move ${mealColors[recipe.type]}`}
+          >
+            {recipe.name}
+          </div>
       ))}
-    </Tabs>
+    </div>
   );
 };
 
-const ShoppingList = ({ meals }) => {
+const ShoppingList = ({ meals }: { meals: any }) => {
   const [checkedItems, setCheckedItems] = useState({});
   
   const categories = {
