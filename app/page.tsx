@@ -7,6 +7,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 
+const mealTypes = ['breakfast', 'lunch', 'dinner', 'dessert'];
+
+const mealColors = {
+  breakfast: 'bg-yellow-200',
+  lunch: 'bg-green-200',
+  dinner: 'bg-blue-200',
+  dessert: 'bg-purple-200'
+};
+
 const recipes = [
   { id: 1, name: 'Oatmeal', type: 'breakfast', ingredients: [{ name: 'Oats', quantity: '1 cup' }, { name: 'Milk', quantity: '1 cup' }, { name: 'Banana', quantity: '1' }] },
   { id: 2, name: 'Avocado Toast', type: 'breakfast', ingredients: [{ name: 'Bread', quantity: '2 slices' }, { name: 'Avocado', quantity: '1' }, { name: 'Eggs', quantity: '2' }] },
@@ -18,7 +27,16 @@ const recipes = [
   { id: 8, name: 'Chocolate Mousse', type: 'dessert', ingredients: [{ name: 'Dark Chocolate', quantity: '100g' }, { name: 'Heavy Cream', quantity: '1 cup' }, { name: 'Eggs', quantity: '2' }] },
 ];
 
-const mealTypes = ['breakfast', 'lunch', 'dinner', 'dessert'];
+enum DaysOfWeek {
+  Monday = 'Monday',
+  Tuesday = 'Tuesday',
+  Wednesday = 'Wednesday',
+  Thursday = 'Thursday',
+  Friday = 'Friday',
+  Saturday = 'Saturday',
+  Sunday = 'Sunday'
+}
+const daysOfWeek = Object.values(DaysOfWeek);
 
 const AutocompleteMeal = ({ day, meals, setMeals }) => {
   const [input, setInput] = useState('');
@@ -106,11 +124,10 @@ const DayPlanner = ({ day, meals, setMeals }) => {
       >
         <AutocompleteMeal day={day} meals={meals} setMeals={setMeals} />
         {meals[day]?.map((meal, index) => (
-          <div key={index} className="flex justify-between items-center mb-2 mt-2 p-2 bg-gray-100 rounded">
+          <div key={index} className={`flex justify-between items-center mb-2 mt-2 p-2 bg-gray-100 rounded ${mealColors[meal.type]}`}>
             <span>{meal.name}</span>
             <div>
-              <Badge variant="secondary" className="mr-2">{meal.type}</Badge>
-              <Button variant="ghost" size="sm" onClick={() => removeMeal(index)}>Remove</Button>
+              <Button variant="ghost" size="sm" onClick={() => removeMeal(index)}>x</Button>
             </div>
           </div>
         ))}
@@ -141,7 +158,7 @@ const RecipeList = () => {
               key={recipe.id}
               draggable
               onDragStart={(e) => onDragStart(e, recipe.id)}
-              className="mb-2 p-2 bg-gray-100 rounded cursor-move"
+              className={`mb-2 p-2 bg-gray-100 rounded cursor-move ${mealColors[recipe.type]}`}
             >
               {recipe.name}
             </div>
@@ -317,7 +334,6 @@ const ShoppingList = ({ meals }) => {
 };
 
 const ComprehensiveMealPlanner = () => {
-  const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const [meals, setMeals] = useState({});
 
   return (
