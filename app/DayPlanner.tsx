@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { mealColors, Recipe, DaysOfWeek, recipes, WeekMeals} from "@/lib/types";
+import { mealColors, Recipe, DaysOfWeek, WeekMeals} from "@/lib/types";
 import {AutocompleteMeal} from "@/app/AutocompleteMeal";
 import { Button } from "@/components/ui/button";
+import recipes from '@/lib/recipes';
 
 export const DayPlanner = ({ day, meals, setMeals }: {day: DaysOfWeek, meals: WeekMeals, setMeals: React.Dispatch<React.SetStateAction<WeekMeals>>}) => {
   const onDragOver = (e: React.DragEvent<HTMLDivElement>) => {

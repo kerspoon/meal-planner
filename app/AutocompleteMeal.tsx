@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
-import { WeekMeals, Recipe, DaysOfWeek, recipes} from "@/lib/types";
+import { WeekMeals, Recipe, DaysOfWeek} from "@/lib/types";
+import recipes from '@/lib/recipes';
 
 type AutocompleteMealProps = {
     day: DaysOfWeek;

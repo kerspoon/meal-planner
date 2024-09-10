@@ -7,7 +7,7 @@ import { ShoppingList } from '@/app/ShoppingList';
 import { RecipeList } from '@/app/RecipeList';
 import { DayPlanner } from '@/app/DayPlanner';
 
-const mealColors = {
+const _ = {
   breakfast: 'bg-yellow-200',
   lunch: 'bg-green-200',
   dinner: 'bg-blue-200',

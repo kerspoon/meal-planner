@@ -1,5 +1,7 @@
 
-import { mealColors, recipes } from "@/lib/types";
+import recipes from "@/lib/recipes";
+import { mealColors } from "@/lib/types";
+
 
 export const RecipeList = () => {
   const onDragStart = (e: React.DragEvent<HTMLDivElement>, recipeId: number) => {
