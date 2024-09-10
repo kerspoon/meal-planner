@@ -7,6 +7,13 @@ import { ShoppingList } from '@/app/ShoppingList';
 import { RecipeList } from '@/app/RecipeList';
 import { DayPlanner } from '@/app/DayPlanner';
 
+const mealColors = {
+  breakfast: 'bg-yellow-200',
+  lunch: 'bg-green-200',
+  dinner: 'bg-blue-200',
+  dessert: 'bg-purple-200'
+};
+
 const daysOfWeek = Object.values(DaysOfWeek);
 
 const ComprehensiveMealPlanner = () => {
