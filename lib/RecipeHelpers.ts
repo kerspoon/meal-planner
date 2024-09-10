@@ -1,4 +1,4 @@
-import { getCatagoryForIngredient } from './foodCategories';
+import { catagoryNames, getCatagoryForIngredient } from './foodCategories';
 import { WeekMeals, ShoppingList, IngredientQuantity } from './types';
 
 // combineQuantities: Combines quantities of the same unit into a single quantity
@@ -58,24 +58,20 @@ export const getIngredientsFromMeals = (meals: WeekMeals) => {
     return ingredients;
 }
 
+// generated empty shopping list using foodCategories.catagoryNames
+export const generateEmptyShoppingList = () => {
+    const categories: ShoppingList = {};
+    for (const category of catagoryNames) {
+      categories[category] = [];
+    }
+    return categories;
+};
 
 // generateShoppingList: Generates a shopping list from the meals
 export const generateShoppingList = (meals: WeekMeals) => {
     const ingredients: Record<string, IngredientQuantity[]> = getIngredientsFromMeals(meals);
 
-    const categories: ShoppingList = {
-        "Fruits": [],
-        "Vegetables": [],
-        "Meat & Fish": [],
-        "Dairy & Eggs": [],
-        "Grains & Pasta": [],
-        "Canned & Jarred Goods": [],
-        "Spices & Seasonings": [],
-        "Baking & Cooking": [],
-        "Frozen Foods": [],
-        "Snacks": [],
-        "Miscellaneous": []
-    };
+    const categories: ShoppingList = generateEmptyShoppingList();
 
     Object.entries(ingredients).forEach(([name, quantities]) => {
       const combined = combineQuantities(quantities);

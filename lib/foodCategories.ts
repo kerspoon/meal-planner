@@ -213,6 +213,8 @@ export const categories = {
     ]
 };
 
+export const catagoryNames = Object.keys(categories);
+
 type IngredientCategories = Record<string, string>;
 export const ingredientCategories: IngredientCategories = {};
 
