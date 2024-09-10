@@ -9,7 +9,7 @@ export const RecipeList = () => {
   return (
     <div className="grid grid-cols-1 gap-4">
       {recipes.map(recipe => (
-            <div
+          <div
             key={recipe.id}
             draggable
             onDragStart={(e) => onDragStart(e, recipe.id)}

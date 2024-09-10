@@ -49,3 +49,5 @@ export const recipes: Recipe[] = [
     { id: 7, name: 'Fruit Parfait', type: MealType.Dessert, ingredients: [{ name: 'Yogurt', quantity: '1 cup' }, { name: 'Mixed Berries', quantity: '1 cup' }, { name: 'Granola', quantity: '1/4 cup' }] },
     { id: 8, name: 'Chocolate Mousse', type: MealType.Dessert, ingredients: [{ name: 'Dark Chocolate', quantity: '100g' }, { name: 'Heavy Cream', quantity: '1 cup' }, { name: 'Eggs', quantity: '2' }] },
   ];
+
+export type ShoppingList = Record<string, { name: string, quantities: string[] }[]>;
