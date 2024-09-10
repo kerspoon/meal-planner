@@ -4,7 +4,19 @@ export const categories = {
         "lime juice",
         "lemon",
         "lemon juice",
-        "pomegranate"
+        "pomegranate",
+        "banana",
+        "kiwi",
+        "strawberries",
+        "raspberries",
+        "blueberries",
+        "pineapple",
+        "papaya",
+        "avocado",
+        "cherry tomatoes",
+        "vine tomatoes",
+        "tomatoes",
+        "roma tomatoes"
     ],
     "Vegetables": [
         "avocado",
@@ -31,6 +43,7 @@ export const categories = {
         "tomatoes",
         "red pepper",
         "red peppers",
+        "yellow peppers",
         "red onion",
         "onion",
         "broccoli",
@@ -41,15 +54,26 @@ export const categories = {
         "artichokes",
         "spring greens",
         "potatoes",
-        "yellow peppers",
         "basil",
         "coriander",
         "parsley",
         "flat-leaf parsley",
         "thyme",
+        "spinach",
+        "kale",
+        "celery",
+        "carrot",
+        "fennel",
+        "cucumber",
+        "jalapeño",
+        "scallions",
+        "baby bok choy",
+        "radishes",
+        "parsnips"
     ],
     "Meat & Fish": [
         "tofu",
+        "tempeh"
     ],
     "Dairy & Eggs": [
         "coconut yogurt",
@@ -60,12 +84,20 @@ export const categories = {
         "sour cream",
         "yogurt",
         "single cream",
+        "almond milk",
+        "coconut milk",
+        "soy milk"
     ],
     "Grains & Pasta": [
         "jasmine rice",
         "polenta",
         "bulgur wheat",
         "brown lentils",
+        "farro",
+        "quinoa",
+        "brown rice",
+        "whole-grain spaghetti",
+        "gluten-free pasta"
     ],
     "Canned & Jarred Goods": [
         "coconut milk",
@@ -75,7 +107,8 @@ export const categories = {
         "cannellini beans",
         "red kidney beans",
         "pitted green olives",
-        "vegetable stock"
+        "vegetable stock",
+        "kalamata olives"
     ],
     "Spices & Seasonings": [
         "sea salt",
@@ -104,6 +137,25 @@ export const categories = {
         "red wine vinegar",
         "sriracha",
         "hot chilli sauce",
+        "tamari",
+        "rice wine vinegar",
+        "balsamic vinegar",
+        "apple cider vinegar",
+        "dried oregano",
+        "dried basil",
+        "dried fennel",
+        "dried sage",
+        "italian seasoning",
+        "ground cinnamon",
+        "ground nutmeg",
+        "ground ginger",
+        "vanilla extract",
+        "nutritional yeast",
+        "baking powder",
+        "baking soda",
+        "cocoa powder",
+        "dijon mustard",
+        "kimchi"
     ],
     "Baking & Cooking": [
         "vegetable oil",
@@ -112,21 +164,52 @@ export const categories = {
         "brown sugar",
         "breadcrumbs",
         "extra virgin olive oil",
-        "sesame seeds"
+        "sunflower oil",
+        "coconut oil",
+        "maple syrup",
+        "gluten-free flour",
+        "cornmeal",
+        "rolled oats",
+        "old-fashioned oats",
+        "quick-cooking oats"
     ],
     "Frozen Foods": [],
-    "Snacks": [
-        "tortillas",
-        "nachos",
-        "focaccia",
+    "Nuts & Seeds": [
         "cashews",
         "salted peanuts",
         "flaked almonds",
         "whole almonds",
         "almonds",
         "toasted almonds",
+        "walnuts",
+        "sesame seeds",
+        "pumpkin seeds",
+        "hemp seeds",
+        "chia seeds",
+        "ground flaxseed",
+        "sunflower seeds",
+        "almond butter",
+        "peanut butter",
+        "tahini",
+    ],
+    "Fresh Herbs": [
+        "chives",
+        "rosemary",
+        "basil",
+        "coriander",
+        "parsley",
+        "thyme",
+        "sage",
+        "dill",
+        "mint",
+        "cilantro"
     ],
     "Miscellaneous": [
+        "tortillas",
+        "nachos",
+        "focaccia",
+        "roasted italian medley",
+        "garlic-infused olive oil"
     ]
 };
 

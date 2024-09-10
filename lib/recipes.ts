@@ -469,6 +469,642 @@ Note: The eggs will take more or less time depending on whether they're fridge c
 
 4. Meanwhile, mix the chilli sauce with the natural yogurt. Serve alongside the eggs and potatoes as soon as they're out of the oven.
     `
+  },
+  {
+    id: 17,
+    name: "Super Seedy Breakfast Porridge",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "rolled oats", quantity: ["cup", 2 / 3] },
+      { name: "almond milk", quantity: ["cup", 0.5] },
+      { name: "pumpkin seeds", quantity: ["tbsp", 2] },
+      { name: "ground ginger", quantity: ["pinch", 1] },
+      { name: "ground cinnamon", quantity: ["pinch", 1] },
+      { name: "ground nutmeg", quantity: ["pinch", 1] },
+      { name: "hemp seeds", quantity: ["tbsp", 2] },
+      { name: "almond butter", quantity: ["tbsp", 1] },
+      { name: "chia seeds", quantity: ["tsp", 2] },
+      { name: "vanilla extract", quantity: ["tsp", 0.5] },
+      { name: "maple syrup", quantity: ["", 0] },
+      { name: "berries", quantity: ["", 0] }
+    ],
+    instructions: `Bring the oats and 2/3 cup water to a boil in a medium saucepan over medium-high heat. Reduce the heat to low and stir in the almond milk, pumpkin seeds, ginger, cinnamon, and nutmeg. Cook, stirring occasionally, for about 5 minutes, until the oats are tender.
+Remove from the heat and stir in the hemp seeds, almond butter, chia seeds, and vanilla. Taste, adding maple syrup as desired for a sweeter porridge.`
+  },
+  {
+    id: 18,
+    name: "Superfood Green Smoothie",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "almond milk", quantity: ["cup", 1] },
+      { name: "hemp seeds", quantity: ["tbsp", 2] },
+      { name: "spinach", quantity: ["cup", 0.5] },
+      { name: "broccoli sprouts", quantity: ["handful", 1] },
+      { name: "kiwi", quantity: ["", 1] },
+      { name: "strawberries", quantity: ["", 5] },
+      { name: "peanut butter", quantity: ["tbsp", 2] },
+      { name: "banana", quantity: ["", 0.5] },
+      { name: "maple syrup", quantity: ["tsp", 1] }
+    ],
+    instructions: `Place all ingredients in a blender and puree until very smooth and creamy. Depending on the power of your blender, you may need to add more liquid.
+  
+To make a smoothie bowl, reduce the liquid by half (use ½ cup almond milk), then blend as directed. Divide the contents into two bowls and drizzle with peanut butter and top with more berries, if desired. Garnish with more fresh fruit, seeds, nut butter, and Crispy Oat Granola (page 228).`
+  },
+  {
+    id: 19,
+    name: "Crispy Oat Granola",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "rolled oats", quantity: ["cup", 2] },
+      { name: "coconut", quantity: ["cup", 1] },
+      { name: "walnuts", quantity: ["cup", 1] },
+      { name: "chia seeds", quantity: ["tbsp", 2] },
+      { name: "hemp seeds", quantity: ["tbsp", 2] },
+      { name: "ground flaxseed", quantity: ["tbsp", 2] },
+      { name: "ground cinnamon", quantity: ["tsp", 1] },
+      { name: "salt", quantity: ["tsp", 0.75] },
+      { name: "sunflower oil", quantity: ["tbsp", 2] },
+      { name: "maple syrup", quantity: ["cup", 0.25] },
+      { name: "vanilla extract", quantity: ["tsp", 1] },
+      { name: "dried cranberries", quantity: ["cup", 0.5] }
+    ],
+    instructions: `This granola is the perfect topper for smoothies and smoothie bowls. We also love noshing on this crispy, subtly sweet granola with a touch of plant-based milk or on its own. While the cranberries are an optional add-in, we are obsessed with their tart, sweet flavour and chewy texture!
+  
+Makes 4 ¼ cups
+
+Preheat the oven to 250˚F. Line a rimmed baking sheet with parchment.
+
+In a large bowl, combine the oats, coconut, walnuts, chia seeds, hemp seeds, flaxseed, cinnamon, and salt.
+
+In a small saucepan over medium heat, whisk the sunflower oil into the maple syrup. Bring to a simmer, then remove from the heat and add the vanilla.
+
+Add the syrup mixture to the oat ingredients and mix thoroughly. Spread the granola in a single layer on the prepared baking sheet.
+
+Bake for 90 minutes, stirring every 15 minutes, until golden brown.
+
+Cool completely, then stir in the dried cranberries, if using.
+
+Transfer to an airtight container and store for several weeks in the fridge, or in the freezer for up to 3 months.`
+}, {
+    id: 20,
+    name: "The Daily Salad",
+    type: MealType.Lunch,
+    ingredients: [
+      { name: "leafy greens", quantity: ["cup", 4] },
+      { name: "pickled beetroot", quantity: ["cup", 0.5] },
+      { name: "chickpeas", quantity: ["cup", 0.5] },
+      { name: "sunflower seeds", quantity: ["cup", 0.25] },
+      { name: "broccoli sprouts", quantity: ["handful", 1] },
+      { name: "carrot", quantity: ["", 1] },
+      { name: "cherry tomatoes", quantity: ["", 10] },
+      { name: "orange juice", quantity: ["cup", 0.25] },
+      { name: "apple cider vinegar", quantity: ["tbsp", 2] },
+      { name: "tahini", quantity: ["tbsp", 2] },
+      { name: "salt", quantity: ["tsp", 0.25] },
+      { name: "black pepper", quantity: ["tsp", 0.25] }
+    ],
+    instructions: `We call this the daily salad because we believe in the power of eating raw vegetables every single day, and what better way than a Fiber Fueled salad? If you're looking for a filling, satisfying, and easy-to-throw-together option, this is it. We call for pickled beets in this recipe. They're low FODMAP even though plain beets are fairly high.
+  
+Salad:
+In a large bowl, toss together the greens, pickled beets, chickpeas, sunflower seeds, sprouts, shredded carrot, sliced cherry tomatoes, and any other Supercharge toppings, if using. Set aside.
+
+Oil-Free Orange Dressing:
+Whisk together the orange juice, vinegar, tahini, salt, and pepper in a small bowl or mason jar until smooth. Starting with 1 tablespoon at a time, whisk in water until your desired consistency is reached (the dressing should be pourable but not runny). Add salt and pepper, as desired. If using later, the dressing will keep in the fridge for up to 5 days.
+
+When ready to serve, drizzle each salad with ¼ cup dressing, toss well, and add salt and pepper to taste.
+
+Optional:
+Add 1 cup Supercharged Roasted Roots (page 231), chopped parsley, and cubed, baked tofu`
+}, {
+    id: 21,
+    name: "Supercharged Roasted Roots",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "sweet potato", quantity: ["cup", 2] },
+      { name: "parsnips", quantity: ["", 2] },
+      { name: "radishes", quantity: ["", 6] },
+      { name: "olive oil", quantity: ["tbsp", 1] },
+      { name: "vegetable broth", quantity: ["tbsp", 2] },
+      { name: "salt", quantity: ["tsp", 0.5] },
+      { name: "black pepper", quantity: ["tsp", 0.5] }
+    ],
+    instructions: `This topping is designed to supercharge your meals wherever you want a little fibre boost. Add a handful to salads, Nourishing Buddha Bowls (page 295), or Tofu Scramble Bowls (page 286), or just enjoy them on their own.
+
+This mix is perfect for Week 1, but the technique can be used on almost any vegetable out there, though cooking times may need to be adjusted.
+
+Serves 4
+
+Preheat the oven to 425˚F.
+
+Toss the cubed sweet potato, chopped parsnips, chopped radishes, olive oil (or garlic-infused olive oil, see page 246), broth, salt, and pepper together in a large bowl until well combined. Place on a rimmed baking sheet in a single layer (you may need to use two, depending on size) and cover with foil.
+
+Roast for 35 minutes, or until mostly soft. Remove from the oven, remove the foil, and stir. Return to the oven for 10 more minutes, or until the edges become lightly crisp.`
+},
+  {
+    id: 22,
+    name: "Down 'n' Dirty Kale Salad",
+    type: MealType.Lunch,
+    ingredients: [
+      { name: "kale", quantity: ["cup", 1] },
+      { name: "tamari", quantity: ["tsp", 3] },
+      { name: "spinach", quantity: ["cup", 1] },
+      { name: "chives", quantity: ["tbsp", 2] },
+      { name: "salt", quantity: ["tsp", 0.25] },
+      { name: "black pepper", quantity: ["tsp", 0.125] },
+      { name: "avocado", quantity: ["", 0.25] },
+      { name: "almond butter", quantity: ["tbsp", 2] },
+      { name: "celery", quantity: ["stalk", 0.5] },
+      { name: "walnuts", quantity: ["tbsp", 2] },
+      { name: "scallions", quantity: ["cup", 0.25] }
+    ],
+    instructions: `This is one of our favourite ways to enjoy kale! The avocado–almond butter dressing is creamy and bursting with flavour. Simple to make, filled with flavour and texture, and brimming with plant-powered nutrients! We use this one as a side dish for multiple meals throughout the four-week plan.
+
+In a medium bowl, drizzle the kale with 1 teaspoon tamari and massage with your hands to soften and break down the kale. Add the spinach, chives, salt, and pepper and toss together once more.
+
+In a separate small bowl, mash the avocado with the almond butter and whisk in the remaining 2 teaspoons of tamari to thin. Pour the avocado mixture over the kale and combine thoroughly with your hands or with tongs, massaging to coat every piece.
+
+Add the chopped celery, roughly chopped walnuts (optional), and chopped scallions (green parts only, optional) and serve.`
+  },
+  {
+    id: 23,
+    name: "Plant-Powered Polenta Ragu",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "olive oil", quantity: ["tsp", 2] },
+      { name: "chopped tomatoes", quantity: ["cup", 1] },
+      { name: "salt", quantity: ["", 0] },
+      { name: "black pepper", quantity: ["", 0] },
+      { name: "lentils", quantity: ["cup", 1] },
+      { name: "roasted italian medley", quantity: ["cup", 2] },
+      { name: "dried oregano", quantity: ["tsp", 0.5] },
+      { name: "dried basil", quantity: ["tsp", 0.5] },
+      { name: "red pepper flakes", quantity: ["", 0] },
+      { name: "almond milk", quantity: ["cup", 1.5] },
+      { name: "cornmeal", quantity: ["cup", 0.5] },
+      { name: "parsley", quantity: ["", 0] },
+      { name: "fresh basil", quantity: ["", 0] }
+    ],
+    instructions: `Creamy polenta is stick-to-your-ribs comfort food, especially when combined with our quick ragu of Italian vegetables and lentils. After Week 1, try this ragu with Pepita Parmesan (page 301), a nutty parm that's delicious on everything from pasta to polenta to popcorn.
+
+Quick Ragu:
+Heat a medium saucepan over medium heat and add the olive oil (or garlic-infused olive oil, see page 246, or vegetable broth). Add in the tomatoes and a pinch of salt and black pepper. Cook, stirring often, for about 10 minutes, until the tomatoes have broken down. Add the lentils, Roasted Italian Medley, oregano, basil, and red pepper flakes, if using. Cook, stirring occasionally, for 10 minutes, or until thickened. Taste as you go and add more salt, pepper, and dried herbs as desired.
+
+Polenta:
+Whisk together ½ cup water and the almond milk in a medium saucepan over medium heat. When bubbles start to surface, whisk in the cornmeal and salt. Reduce the heat to a simmer and cook for 10 to 15 minutes, until thickened. Taste as you go and add more salt and pepper to taste.
+
+To serve, divide the polenta into two bowls and top with the ragu. Garnish with fresh chopped parsley and basil.`
+  },
+  {
+    id: 24,
+    name: "Homemade Rocket-Walnut Pesto Pasta",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "rocket", quantity: ["cup", 3] },
+      { name: "walnuts", quantity: ["cup", 0.5] },
+      { name: "nutritional yeast", quantity: ["tbsp", 2] },
+      { name: "lemon juice", quantity: ["tbsp", 2] },
+      { name: "vegetable broth", quantity: ["cup", 0.25] },
+      { name: "salt", quantity: ["tsp", 0.25] },
+      { name: "black pepper", quantity: ["tsp", 0.25] },
+      { name: "olive oil", quantity: ["tbsp", 1] },
+      { name: "gluten-free pasta", quantity: ["ounce", 8] },
+      { name: "roasted italian medley", quantity: ["cup", 2] }
+    ],
+    instructions: `Make the pesto: Place the rocket, lightly toasted walnuts, and nutritional yeast in the base of a food processor and blend until very finely chopped. With the motor running, add in the lemon juice, vegetable broth or water, salt, and pepper. Add more salt and pepper to taste. Drizzle in the olive oil, if using, and set aside.
+
+Bring a large pot of salted water to a boil. Add the pasta and cook until just al dente according to package directions. Reserve ½ cup of pasta water and drain the pasta.
+
+Place the pasta back into the pot along with the pesto. Toss, adding splashes of pasta water as needed to coat the pasta. Stir in the leftover Roasted Italian Medley and serve. If you prefer your pasta a little spicy, enjoy this with crushed red pepper flakes.`
+  },
+  {
+    id: 25,
+    name: "Roasted Italian Medley",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "aubergine", quantity: ["", 1] },
+      { name: "courgette", quantity: ["", 2] },
+      { name: "red bell pepper", quantity: ["", 1] },
+      { name: "roma tomatoes", quantity: ["", 2] },
+      { name: "fennel", quantity: ["", 1] },
+      { name: "italian seasoning", quantity: ["tsp", 1] },
+      { name: "vegetable broth", quantity: ["cup", 0.25] },
+      { name: "olive oil", quantity: ["tsp", 2.5] },
+      { name: "salt", quantity: ["tsp", 0.5] },
+      { name: "black pepper", quantity: ["tsp", 0.5] },
+      { name: "red pepper flakes", quantity: ["tsp", 0.25] }
+    ],
+    instructions: `This one-pan side dish is designed to make meal prep for Week 1 even easier. You'll use these vegetables over and over again in different ways: in the Plant-Powered Polenta Ragu (page 235), the Muhammara Sandwich (page 233), and the Pesto Pasta (239).
+
+Makes 6 cups
+
+Preheat the oven to 400˚F.
+
+In a large bowl, toss together the cubed aubergine, diced courgette, cubed red bell pepper, diced Roma tomatoes, diced fennel (fronds removed), Italian seasoning, vegetable broth, olive oil, salt, black pepper, and red pepper flakes (optional). Place in a single layer on a rimmed baking sheet (you may need two baking sheets, depending on the size), then place on the top rack of the oven.
+
+Cook for 35 to 40 minutes, depending on the size of your vegetables, until the vegetables are very tender.
+
+Keep in the fridge for up to 6 days. Enjoy any extras as is, on salads, or combined with cooked whole-grain pasta.`
+  }, 
+  {
+    id: 26,
+    name: "Muhammara Dip",
+    type: MealType.Lunch,
+    ingredients: [
+      { name: "red bell peppers", quantity: ["", 6] },
+      { name: "walnuts", quantity: ["cup", 1] },
+      { name: "olive oil", quantity: ["tbsp", 2] },
+      { name: "lemon juice", quantity: ["cup", 0.25] },
+      { name: "balsamic vinegar", quantity: ["cup", 0.25] },
+      { name: "ground cumin", quantity: ["tsp", 1] },
+      { name: "sea salt", quantity: ["tsp", 1] },
+      { name: "red pepper flakes", quantity: ["tsp", 0.5] }
+    ],
+    instructions: `Muhammara, made from roasted red peppers, walnuts, cumin, and red pepper flakes, is a hot pepper dip with Syrian roots. We love this smoky spread with vegetables and toasted sourdough, and in our Muhammara Sandwich (page 243).
+
+Preheat the oven to 450˚F.
+
+Place the whole bell peppers directly onto a rimmed baking sheet and roast for 25 minutes, turning after 15 minutes, so that the bell peppers are lightly charred on each side.
+
+Place the peppers in a large bowl and immediately cover with a kitchen towel to allow them to steam for at least 10 minutes. This will help the skin soften so it's easier to remove.
+
+Once cool, remove the skin, core, and seeds. Roughly chop and set aside.
+
+To the base of a food processor, add in the chopped raw walnuts, olive oil, lemon juice, vinegar, cumin, salt, and red pepper flakes. Pulse 8 to 10 times to combine. Add in the roasted peppers and pulse a few more times to combine. You can make this into a creamy, hummus-like spread or a chunky nut spread. Taste and adjust as needed, adding more lemon for acidity, chilli flakes for spice, balsamic vinegar for depth, and/or salt.
+
+This will keep, covered, in the fridge for up to 4 days.`
+  },
+  {
+    id: 27,
+    name: "Tofu Scramble Bowls",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "vegetable broth", quantity: ["tbsp", 5] },
+      { name: "firm tofu", quantity: ["ounce", 8] },
+      { name: "scallion", quantity: ["", 1] },
+      { name: "smoked paprika", quantity: ["tsp", 0.5] },
+      { name: "ground turmeric", quantity: ["tsp", 0.5] },
+      { name: "ground cumin", quantity: ["tsp", 0.25] },
+      { name: "salt", quantity: ["", 0] },
+      { name: "black pepper", quantity: ["", 0] },
+      { name: "sweet potato toast", quantity: ["slice", 2] },
+      { name: "kale", quantity: ["cup", 2] }
+    ],
+    instructions: `Consider this your new favourite brunch. Tofu is lower in saturated fat, lower in monounsaturated fat, and higher in polyunsaturated fats and free of cholesterol compared to eggs, making it the perfect swap.
+
+If you're new to cooking with tofu, know that you'll need to press it first. You can do this with a tofu press, or by wrapping the tofu block in paper towels, placing it on a rimmed baking sheet and placing something heavy on top. Let sit for about 10 minutes to let most of the water drain out. This allows the tofu to become chewier, perfect for egg-like curds.
+
+Heat a medium skillet over medium heat, add 2 tablespoons vegetable broth, and heat until shimmering. Add the drained, pressed, and crumbled or diced tofu and cook until warmed, about 2 minutes, then add the sliced scallions (green parts only), paprika, turmeric, cumin, and a pinch of salt. Reduce the heat to low and cook until warmed, stirring occasionally, about 5 more minutes.
+
+In a separate skillet, heat the remaining 3 tablespoons broth over medium heat. Add the cubed leftover Berry Good Sweet Potato Toast (page 226) and cook, stirring occasionally, until warm, about 5 minutes. Add the finely chopped kale (stems removed) and a pinch of salt and pepper and cover. Cook for about 3 minutes, until the greens are just wilted.
+
+Divide the kale and sweet potatoes into two bowls, then top with the tofu mixture. For a heartier meal, add a slice of sourdough toast, with or without peanut or almond butter.`
+  },
+  {
+    id: 28,
+    name: "Simple Overnight Oats",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "old-fashioned oats", quantity: ["cup", 2/3] },
+      { name: "chia seeds", quantity: ["tbsp", 1] },
+      { name: "almond butter", quantity: ["tbsp", 1] },
+      { name: "ground cinnamon", quantity: ["tsp", 0.5] },
+      { name: "dairy-free milk", quantity: ["cup", 1] },
+      { name: "fruit", quantity: ["cup", 0.75] },
+      { name: "maple syrup", quantity: ["", 0] }
+    ],
+    instructions: `Everyone needs a good overnight oat recipe, and this is our go-to. The beauty of overnight oats is that they are customisable to whatever you are craving: add soy milk for a higher protein breakfast, almond milk for low FODMAP, or coconut milk for a creamier bowl of oats. And get those omega-3s cranking with the super seeds on this one!
+
+In a resealable jar or bowl, combine the oats, chia seeds, nut butter (almond butter or peanut butter), and cinnamon. Add a splash of the milk and mix everything together, working the nut butter into the oats as much as possible. Add the rest of the milk and stir to combine.
+
+Cover the bowl or place the lid on the jar and refrigerate, up to 4 days. When ready to serve, mix in the fruit and a drizzle of maple syrup, if desired.
+
+Low FODMAP options:
+Lower FODMAP fruit options include raspberries, blueberries, strawberries, pineapple, kiwi, and papaya.
+
+Supercharge it!
+Add in hemp seeds, additional chia seeds, fruit (especially berries), and unsweetened shredded coconut.`
+  },
+  {
+    id: 29,
+    name: "Gluten-Free Pancakes",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "ground flaxseed", quantity: ["tbsp", 1] },
+      { name: "water", quantity: ["tbsp", 3] },
+      { name: "gluten-free flour", quantity: ["cup", 1] },
+      { name: "baking powder", quantity: ["tsp", 1] },
+      { name: "baking soda", quantity: ["tsp", 0.25] },
+      { name: "salt", quantity: ["tsp", 0.25] },
+      { name: "almond milk", quantity: ["cup", 1] },
+      { name: "apple cider vinegar", quantity: ["tsp", 1] },
+      { name: "sunflower oil", quantity: ["tbsp", 1] },
+      { name: "vanilla extract", quantity: ["tbsp", 1] }
+    ],
+    instructions: `Three cheers for pancakes! These gluten-free pancakes are perfect for lazy weekend mornings. Serve them plain, or as berry pancakes by mixing fresh chopped fruit into the finished batter.
+
+Makes 6 pancakes
+
+Whisk together the flaxseed and 3 tablespoons water and set aside until jelled, about 5 minutes.
+
+In a large mixing bowl, whisk together the gluten-free flour, baking powder, baking soda, and salt in a large mixing bowl. Set aside.
+
+In a separate medium bowl, add the almond milk and vinegar. Then add in the sunflower oil, vanilla, and the jelled flax. Whisk to incorporate, then add the almond milk mixture into the flour mixture and whisk thoroughly until no lumps remain.
+
+Grease and heat a large skillet with coconut oil or cooking spray over medium-high heat. Drop batter into the hot skillet, using a ¼ cup measuring cup. Wait for large bubbles to form, then flip and cook another 60 seconds, until golden brown on both sides.
+
+Serve with berries and maple syrup, if desired.
+
+Supercharge it!
+Add chopped berries to the batter.`
+  },
+  {
+    id: 30,
+    name: "Chocolate Mousse",
+    type: MealType.Dessert,
+    ingredients: [
+      { name: "soft tofu", quantity: ["block", 1] },
+      { name: "coconut milk", quantity: ["cup", 0.5] },
+      { name: "maple syrup", quantity: ["cup", 0.5] },
+      { name: "cocoa powder", quantity: ["cup", 0.5] },
+      { name: "peanut butter", quantity: ["tbsp", 2] },
+      { name: "vanilla extract", quantity: ["tsp", 1] },
+      { name: "salt", quantity: ["tsp", 1] }
+    ],
+    instructions: `Creamy, sweet, and perfectly satisfying, this chocolate mousse is a plant protein–packed sweet treat.
+
+Note: Place the can of coconut milk in the refrigerator upside down for at least 3 hours. This will allow the coconut milk fat/solids to harden and separate from the liquid. This helps make the mousse creamier!
+
+Place the tofu (drained but not pressed), coconut milk, maple syrup, cocoa powder, peanut butter, vanilla, and salt into the base of a food processor or high-powered blender. Puree until very smooth, scraping down the sides as necessary.
+
+Divide among 4 to 6 ramekins or small bowls and allow to chill in the refrigerator for 30 minutes or more to set.
+
+Supercharge It!
+Add up to 30 raspberries per serving for added sweet flavour, fibre, and another Plant Point.`
+  },
+  {
+    id: 31,
+    name: "Puttanesca Tofu Scramble",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "vegetable broth", quantity: ["tbsp", 1] },
+      { name: "olive oil", quantity: ["tbsp", 1] },
+      { name: "scallion", quantity: ["", 1] },
+      { name: "roma tomato", quantity: ["", 1] },
+      { name: "red pepper flakes", quantity: ["tsp", 0.25] },
+      { name: "dried thyme", quantity: ["tsp", 0.5] },
+      { name: "dried oregano", quantity: ["tsp", 0.5] },
+      { name: "extra-firm tofu", quantity: ["ounce", 8] },
+      { name: "ground turmeric", quantity: ["tsp", 0.25] },
+      { name: "salt", quantity: ["", 0] },
+      { name: "capers", quantity: ["tbsp", 1] },
+      { name: "black olives", quantity: ["cup", 0.25] },
+      { name: "black pepper", quantity: ["", 0] },
+      { name: "parsley", quantity: ["", 0] }
+    ],
+    instructions: `We took our favourite pasta sauce and turned it into a breakfast scramble. Because why would you not!
+
+Serves 2
+
+In a large skillet over medium heat, combine the vegetable broth and olive oil. Add the scallion (green parts only, thinly sliced), chopped Roma tomato, red pepper flakes (if using), thyme, and oregano. Sauté for about 5 minutes, until the vegetables are softened.
+
+Use a spatula to move the veggies to one side of the pan, then crumble in the tofu (drained and pressed), gently breaking the tofu up into small curds so that it resembles eggs. Add the turmeric and a pinch of salt, then cook for 2 to 3 minutes, stirring often, until the tofu is warmed through.
+
+Add the drained capers and sliced black olives and toss together. Add salt, black pepper, and red pepper flakes to taste. Top with fresh chopped parsley. Serve as is or with toasted sourdough.`
+  },
+  {
+    id: 32,
+    name: "Chocolate Peanut Butter Super Smoothie",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "bananas", quantity: ["", 2] },
+      { name: "cocoa powder", quantity: ["cup", 0.25] },
+      { name: "peanut butter", quantity: ["cup", 0.25] },
+      { name: "hemp seeds", quantity: ["tbsp", 2] },
+      { name: "almond milk", quantity: ["cup", 3] },
+      { name: "maple syrup", quantity: ["tsp", 2] },
+      { name: "ice cubes", quantity: ["handful", 1] }
+    ],
+    instructions: `This super smoothie is so thick and creamy, you might mistake it for a milkshake! Packed with plant-based protein and satisfying healthy fats, this super smoothie will keep you full for hours.
+
+Combine the frozen bananas, cocoa powder, peanut butter, hemp seeds, almond or soy milk, maple syrup (or 1 date), and a handful of ice cubes in a blender and puree until creamy and smooth. Divide into two glasses and serve.
+
+To make it into a smoothie bowl, reduce the milk to ¾ cup and top it with your favourite toppers. We love a few extra slices of banana, our Crispy Oat Granola (page 228), and a drizzle of peanut butter.
+
+Lower FODMAP options:
+Unripe bananas are lower in FODMAPs than ripe bananas. Half a ripe banana or 1 medium unripe banana are both low FODMAP. Use ½ banana per serving if you are sensitive to fructose.
+Dates are higher in fructans, so use maple syrup if necessary.`
+  },
+  {
+    id: 33,
+    name: "Spicy Breakfast Tacos",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "cherry tomatoes", quantity: ["cup", 0.25] },
+      { name: "jalapeño", quantity: ["", 0.5] },
+      { name: "garlic-infused olive oil", quantity: ["tsp", 2] },
+      { name: "garlic", quantity: ["clove", 1] },
+      { name: "lime", quantity: ["", 0.5] },
+      { name: "salt", quantity: ["pinch", 1] },
+      { name: "black pepper", quantity: ["pinch", 1] },
+      { name: "black beans", quantity: ["cup", 0.5] },
+      { name: "smoked paprika", quantity: ["tsp", 0.75] },
+      { name: "ground cumin", quantity: ["tsp", 0.75] },
+      { name: "chives", quantity: ["tsp", 2] },
+      { name: "cayenne pepper", quantity: ["dash", 1] },
+      { name: "olive oil", quantity: ["tsp", 1] },
+      { name: "firm tofu", quantity: ["ounce", 6] },
+      { name: "corn tortillas", quantity: ["", 4] },
+      { name: "cilantro", quantity: ["cup", 0.25] },
+      { name: "avocado", quantity: ["", 0.25] }
+    ],
+    instructions: `Tacos for breakfast? Yes, please! Feel free to adjust the spice by decreasing the amount of jalapeño used in the salsa.
+
+Make the salsa: In a small bowl, combine the sliced cherry tomatoes, seeded and sliced jalapeño, garlic-infused olive oil (see page 246), minced garlic, and juice of ½ lime with a pinch of salt and pepper. Set aside.
+
+Make the taco filling: In a small saucepan, heat the black beans along with 2 tablespoons of water, ¼ teaspoon smoked paprika, ½ teaspoon cumin, 1 teaspoon chives, and a small pinch of cayenne, if using. Continue to cook for about 5 minutes, until warm. Gently smash the mixture using the back of a spoon, leaving some black beans whole. Set aside.
+
+In a small bowl, add the remaining ½ teaspoon paprika, ½ teaspoon cumin, 1 teaspoon chives, dash cayenne, if using, and salt and pepper. Add 2 tablespoons water and whisk together. Set aside.
+
+Heat the oil in a medium skillet over medium heat. Once hot, crumble the drained tofu into the pan along with the reserved taco sauce. Cook, stirring occasionally, for 5 minutes, or until heated through and the seasoning is absorbed.
+
+To serve, warm the tortillas in a clean and dry skillet until warm and flexible. Top with the tofu, black beans, cilantro, sliced avocado, cherry tomato salsa, and a squeeze of fresh lime juice. Serve warm.`
+  },
+  {
+    id: 34,
+    name: "Mediterranean Grain Salad",
+    type: MealType.Lunch,
+    ingredients: [
+      { name: "farro", quantity: ["cup", 1] },
+      { name: "chickpeas", quantity: ["cup", 1] },
+      { name: "tomato", quantity: ["", 1] },
+      { name: "red bell pepper", quantity: ["", 1] },
+      { name: "yellow bell pepper", quantity: ["", 1] },
+      { name: "cucumber", quantity: ["cup", 0.5] },
+      { name: "kalamata olives", quantity: ["cup", 0.25] },
+      { name: "parsley", quantity: ["cup", 0.25] },
+      { name: "lemon zest", quantity: ["tsp", 1] },
+      { name: "lemon juice", quantity: ["cup", 0.25] },
+      { name: "garlic", quantity: ["clove", 1] },
+      { name: "dijon mustard", quantity: ["tsp", 1] },
+      { name: "salt", quantity: ["", 0] },
+      { name: "black pepper", quantity: ["", 0] },
+      { name: "olive oil", quantity: ["tbsp", 3] }
+    ],
+    instructions: `This grain salad is perfect for lunch or easy dinners. Mix all of the ingredients together, then toss with the dressing right before serving. To pack for work, assemble the salad without the dressing in one container and the dressing in another. Toss together, then enjoy.
+
+Make the grain salad: Bring 3 cups water to a boil in a medium saucepan over medium-high heat and add the farro. Cover, reduce the heat to medium-low, and simmer for 25 to 30 minutes, until the farro is tender. Drain and rinse under cold water and set aside.
+
+Combine the cooked farro, chickpeas, diced large tomato, chopped medium red and yellow bell peppers, seeded and chopped cucumber, sliced kalamata olives, and chopped fresh parsley in a large bowl and toss together. Set aside.
+
+Make the dressing: In a separate small bowl, whisk together the lemon zest, lemon juice, minced medium garlic clove, Dijon mustard, and a generous pinch of salt and pepper until well combined, then slowly drizzle in the olive oil.
+
+Assemble: Toss the dressing with the grain salad until well combined, adding more salt and pepper as desired. Store in the fridge. Leftovers will keep for 2 to 3 days in the fridge.
+
+Low FODMAP options:
+Farro is high in fructans. Millet, quinoa, and brown rice are lower FODMAP options.
+Chickpeas have moderate GOS. Reduce to ½ cup.
+Garlic is high in fructans. Omit and use 1 teaspoon garlic-infused olive oil (see page 246) instead.`
+  },{
+    id: 35,
+    name: "Kimchi Fried Rice",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "kimchi", quantity: ["ounce", 16] },
+      { name: "toasted sesame oil", quantity: ["tsp", 2] },
+      { name: "scallions", quantity: ["", 3] },
+      { name: "firm tofu", quantity: ["ounce", 8] },
+      { name: "garlic", quantity: ["clove", 3] },
+      { name: "ginger", quantity: ["tbsp", 1] },
+      { name: "baby bok choy", quantity: ["bunch", 2] },
+      { name: "shiitake mushrooms", quantity: ["ounce", 4] },
+      { name: "tamari", quantity: ["tbsp", 1] },
+      { name: "brown rice", quantity: ["cup", 2] },
+      { name: "rice wine vinegar", quantity: ["tsp", 2] }
+    ],
+    instructions: `This fried rice gets a Fibre Fueled boost from the addition of kimchi, a Korean staple of fermented cabbage and vegetables. Alex really likes Sunja's Kimchi; use it if you can find it.
+
+Drain the kimchi in a colander, reserving the liquid. Roughly chop the kimchi a few times into bite-size pieces, then set aside.
+
+Heat the sesame oil in a large skillet over medium-high heat. Add the sliced scallions and cook, stirring frequently, for 2 to 3 minutes, until tender. Crumble in the drained and pressed tofu and stir to combine. Cook for an additional 2 to 3 minutes, until lightly browned. Stir in the minced garlic and fresh grated ginger.
+
+Add in the thinly sliced baby bok choy and thinly sliced shiitake mushrooms and cook for another 2 to 3 minutes, until the bok choy is bright green and tender.
+
+Add in the kimchi and tamari and cook until just heated through. Add in the cooked and cooled brown rice (reserved from Gumbo recipe, page 303), 1 tablespoon reserved kimchi brine, and the rice wine vinegar and cook, stirring frequently, for 3 to 4 minutes, until the mixture is heated through. Season to taste, adding more tamari, toasted sesame oil, or kimchi brine, as desired. Serve immediately.
+
+Low FODMAP options:
+Kimchi is high in fructans. Many kimchi brands contain garlic, so if you are sensitive to fructans, then you can either omit the kimchi altogether or select a different recipe for dinner tonight.
+Use only the green parts of scallions for low FODMAP.
+Garlic is high FODMAP and fructan. Omit and use 2 teaspoons garlic-infused olive oil (see page 246) instead.
+A 1-cup serving of bok choy is FODMAP friendly. Over 1 1/3 cups per serving is moderate in sorbitol.
+Shiitake mushrooms are high in mannitol. Substitute oyster mushrooms or omit.`
+  },
+  {
+    id: 36,
+    name: "Turmeric Energy Bites",
+    type: MealType.Dessert,
+    ingredients: [
+      { name: "rolled oats", quantity: ["cup", 1.33] },
+      { name: "almonds", quantity: ["cup", 0.25] },
+      { name: "hemp seeds", quantity: ["cup", 0.25] },
+      { name: "almond butter", quantity: ["cup", 0.5] },
+      { name: "maple syrup", quantity: ["cup", 0.25] },
+      { name: "lemon zest", quantity: ["tsp", 1] },
+      { name: "lemon juice", quantity: ["tbsp", 2] },
+      { name: "ground turmeric", quantity: ["tsp", 1] },
+      { name: "salt", quantity: ["pinch", 1] },
+      { name: "black pepper", quantity: ["pinch", 1] }
+    ],
+    instructions: `Turmeric contains the plant compound curcumin, which is known for its anti-inflammatory and antioxidant properties. It is also what gives curry its vibrant yellow colour. We added it to these bites with a touch of lemon for a sweet ball that's perfect for a snack between meals or a sweet after-dinner treat. Once it hits your lips . . . it's so good!
+
+Makes 16 to 18 bites
+
+Add the oats, chopped or sliced almonds, and hemp seeds to a medium bowl. Mix in the almond or peanut butter, maple syrup, lemon zest, freshly squeezed lemon juice, turmeric, salt, and pepper until well combined.
+
+Cover a small tray or plate with parchment paper. Roll the mixture into tablespoon-size balls and place on a parchment paper–lined tray.
+
+Place the tray in the refrigerator to chill until set, then transfer to an airtight container and keep in the fridge for up to 1 week or the freezer for up to 2 months.
+
+Low FODMAP option:
+Almonds are higher in FODMAPs (GOS) but a serving size of 10 nuts or 1 tablespoon of almond butter are okay if you're sensitive. One and a half tablespoons of almond butter has moderate GOS. Please pay attention to how you feel when increasing certain foods higher in FODMAPs this week and make adjustments to the recipes with the lower FODMAP options as necessary.
+Peanut butter is lower in FODMAPs than almond butter.`
+  },
+  {
+    id: 37,
+    name: "Banana Baked Oatmeal",
+    type: MealType.Breakfast,
+    ingredients: [
+      { name: "banana", quantity: ["", 1] },
+      { name: "quick-cooking oats", quantity: ["cup", 1.5] },
+      { name: "ground flaxseeds", quantity: ["tbsp", 2] },
+      { name: "ground cinnamon", quantity: ["tsp", 0.5] },
+      { name: "baking powder", quantity: ["tsp", 1] },
+      { name: "salt", quantity: ["tsp", 0.25] },
+      { name: "almond milk", quantity: ["cup", 0.75] },
+      { name: "maple syrup", quantity: ["cup", 0.33] },
+      { name: "sunflower oil", quantity: ["tbsp", 2] },
+      { name: "vanilla extract", quantity: ["tsp", 1] },
+      { name: "walnuts", quantity: ["cup", 0.25] }
+    ],
+    instructions: `Baked oatmeal is one of our favourite warm breakfasts. While this one is delicious right out of the pan, we recommend enjoying it warm, topped with cold almond milk, chopped nuts, and extra berries.
+
+To prepare ahead, assemble everything the night before to bake in the morning or prep on Sunday and reheat with a little more almond milk as it will dry out slightly in the fridge.
+
+Preheat the oven to 350°F. Lightly spray an 8 x 8-inch baking dish.
+
+Place the sliced large banana in a single row on the bottom of the pan and set aside.
+
+In a medium bowl, whisk together the oats, flaxseeds, cinnamon, baking powder, and salt.
+
+In a separate medium bowl, whisk together the almond milk or other dairy-free milk, maple syrup, organic sunflower oil, and vanilla. Add to the oat mixture and stir together until combined. Stir in the chopped walnuts or other chopped nuts and gently top the sliced bananas in the baking dish with the oatmeal. Place in the oven and bake for 30 minutes, or until golden brown and set.
+
+Low FODMAP options:
+Quick-cooking oats have moderate GOS and fructans. Sub rolled oats.`
+  },
+  {
+    id: 38,
+    name: "Sunday Pasta",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "cherry tomatoes", quantity: ["pint", 1] },
+      { name: "olive oil", quantity: ["tsp", 1] },
+      { name: "salt", quantity: ["", 0] },
+      { name: "black pepper", quantity: ["", 0] },
+      { name: "whole-grain spaghetti", quantity: ["ounce", 8] },
+      { name: "tempeh", quantity: ["ounce", 8] },
+      { name: "dried fennel", quantity: ["tsp", 1] },
+      { name: "dried basil", quantity: ["tsp", 0.5] },
+      { name: "dried oregano", quantity: ["tsp", 0.5] },
+      { name: "red pepper flakes", quantity: ["tsp", 0.25] },
+      { name: "dried sage", quantity: ["tsp", 0.5] },
+      { name: "garlic", quantity: ["clove", 3] },
+      { name: "tamari", quantity: ["tbsp", 1] },
+      { name: "maple syrup", quantity: ["tbsp", 1] },
+      { name: "lemon juice", quantity: ["tbsp", 3] },
+      { name: "rocket", quantity: ["cup", 3] },
+      { name: "walnuts", quantity: ["cup", 0.5] },
+      { name: "nutritional yeast", quantity: ["tbsp", 2] },
+      { name: "vegetable broth", quantity: ["cup", 0.25] },
+      { name: "cashew cream", quantity: ["", 0] }
+    ],
+    instructions: `Growing up in an Italian household, Alex always associates Sunday evenings with family and piping-hot bowls of pasta. This Sunday dinner combines a few of our fibre-fueled favourites: tempeh sausage, rocket-lemon pesto, roasted tomatoes, and cashew cream. It takes longer than some of the other recipes to come together, but the extra effort is worth it.
+
+The addition of cashew cream is optional, but it makes for an even more luscious dinner. Cashew cream thickens considerably once cooled, so reheat with a few tablespoons of water to thin.
+
+Make the roasted tomatoes: Preheat the oven to 400˚F. Toss the cherry tomatoes with the olive oil and a pinch of salt and pepper, then place on a rimmed baking sheet. Roast for about 25 minutes, until very reduced and soft. Set aside.
+
+Bring a large pot of salted water to a boil over medium-high heat and add the pasta. Cook until just al dente, reserve 1 cup pasta water, and drain. Set aside.
+
+Make the sausage: Heat the olive oil in a large skillet over medium heat. Add the crumbled tempeh and cook for about 5 minutes, stirring often, until the tempeh is browned and crispy. Add the dried fennel, basil, oregano, red pepper flakes, sage, minced garlic clove, tamari, maple syrup and lemon juice. Cook, stirring occasionally, for another 2 to 3 minutes and set aside.
+
+Make the pesto: Place the rocket, walnuts, and nutritional yeast in the base of a food processor and blend until very finely chopped. With the motor running, add in the lemon juice, vegetable broth or water, salt, and pepper. Drizzle in the olive oil, if desired. Add more salt and pepper to taste.
+
+To assemble, toss the cooked spaghetti with the tomatoes, tempeh sausage, pesto, and cashew cream (page 307), if using. Thin with the reserved pasta water, adding 1 tablespoon at a time if needed, until creamy. Serve immediately.
+
+Low FODMAP options:
+5 cherry tomatoes per serving is low in fructans, so if sensitive, then reduce to only 20 cherry tomatoes total, or omit.
+Whole-grain spaghetti is high in fructans. Reduce to ½ cup cooked per serving for FODMAP friendly, or use an alternative pasta option, like quinoa.
+Garlic is high in fructans. Omit and sub 1 teaspoon garlic-infused olive oil (see page 246) for the sausage and 2 teaspoons for the pesto.
+The cashews in the cashew cream are high in GOS and have moderate fructans. Omit the cashew cream if sensitive.`
   }
 ];
 

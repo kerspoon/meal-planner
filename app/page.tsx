@@ -40,7 +40,7 @@ const ComprehensiveMealPlanner = () => {
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Meal Planner</h1>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 h-screen overflow-y-auto">
           <Card>
             <CardHeader>
               <CardTitle>Recipe List</CardTitle>
