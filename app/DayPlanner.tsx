@@ -41,7 +41,7 @@ export const DayPlanner = ({ day, meals, setMeals }: {day: DaysOfWeek, meals: We
       >
         <AutocompleteMeal day={day} meals={meals} setMeals={setMeals} />
         {meals[day]?.map((meal, index: number) => (
-          <div key={index} className={`flex justify-between items-center mb-2 mt-2 p-2 bg-gray-100 rounded ${mealColors[meal.type]}`}>
+          <div key={index} className={`flex justify-between items-center mb-2 mt-2 p-2 rounded ${mealColors[meal.type]}`}>
             <span>{meal.name}</span>
             <div>
               <Button variant="ghost" size="sm" onClick={() => removeMeal(index)}>x</Button>
