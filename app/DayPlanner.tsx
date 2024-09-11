@@ -49,7 +49,10 @@ export const DayPlanner = ({ day, meals, setMeals, onRecipeClick }: {
           <div key={index} className={`flex justify-between items-center mb-2 mt-2 p-2 rounded cursor-pointer ${mealColors[meal.type]}`} onClick={() => {onRecipeClick(meal.id)}}>
             <span>{meal.name}</span>
             <div>
-              <Button variant="ghost" size="sm" onClick={() => removeMeal(index)}>x</Button>
+              <Button variant="ghost" size="sm" onClick={(e) => {
+                e.stopPropagation();
+                removeMeal(index);
+              }}>x</Button>
             </div>
           </div>
         ))}
