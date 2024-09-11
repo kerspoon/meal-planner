@@ -6,7 +6,7 @@ import { mealColors, Recipe } from "@/lib/types";
 export const RecipeList = ({onRecipeClick}: {onRecipeClick: (recipeId: number) => void}) => {
   return (
     <div className="grid grid-cols-1 gap-4">
-      {recipes.map(recipe => RenderRecipe(recipe, onRecipeClick))}
+      {recipes.sort((a, b) => a.name.localeCompare(b.name)).map((recipe) => RenderRecipe(recipe, onRecipeClick))}
     </div>
   );
 };
