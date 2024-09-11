@@ -8,3 +8,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 # to do
 
 - some better interface for showing the recipies.
+ + add a search bar the looks in the ingredients and the title

@@ -37,7 +37,10 @@ export const DayPlanner = ({ day, meals, setMeals, onRecipeClick }: {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{day}</CardTitle>
+        <div style={{display:'block'}}>
+          <CardTitle className='float-left'>{day}</CardTitle>
+          <Button className="float-right" variant="ghost" size="sm" onClick={() => setMeals((prevMeals: WeekMeals) => ({ ...prevMeals, [day]: [] }))}>x</Button>
+        </div>
       </CardHeader>
       <CardContent
         onDragOver={onDragOver}

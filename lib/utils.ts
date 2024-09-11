@@ -1,5 +1,5 @@
 import { clsx, type ClassValue } from "clsx"
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
@@ -7,7 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 
-export const colorFodmap = (fodmapLevel: string | undefined) => {
+export const colorFodmap = (fodmapLevel: string | undefined, checked: boolean) => {
+  if (checked) return 'text-gray-400';
   switch (fodmapLevel) {
     case 'High':
       return 'text-red-500';
@@ -27,9 +28,9 @@ const formatter2dp = new Intl.NumberFormat([], {
 export const fmt2dp = formatter2dp.format;
 
 // Custom hook to store data in local storage
-export function useLocalStorage<T>(key: string, fallbackValue: T) {
+export function useLocalStorage<T>(key: string, fallbackValue: T): [T, Dispatch<SetStateAction<T>>] {
 
-  const [value, setValue] = useState(() => {
+  const [value, setValue] = useState<T>(() => {
     const stored = localStorage.getItem(key);
     return stored ? JSON.parse(stored) : fallbackValue;
   });
