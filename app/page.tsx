@@ -8,11 +8,12 @@ import { RecipeList } from '@/app/RecipeList';
 import { DayPlanner } from '@/app/DayPlanner';
 import { RecipeDetail } from '@/app/RecipeDetail';
 import { Button } from '@/components/ui/button';
+import { useLocalStorage } from '@/lib/utils';
 
 const daysOfWeek = Object.values(DaysOfWeek);
 
 const ComprehensiveMealPlanner = () => {
-  const [meals, setMeals] = useState<WeekMeals>({
+  const [meals, setMeals] = useLocalStorage<WeekMeals>("meals", {
     Monday: [],
     Tuesday: [],
     Wednesday: [],
