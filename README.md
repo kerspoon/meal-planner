@@ -1,21 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# running
 
-First, run the development server:
+- `npm run build, npm run static` builds the app into a static web app and serves the HTML from `./out` on [http://localhost:8080](http://localhost:8080)
+- `npm run dev` builds and serves an auto reloading version of the app. Open [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# to do
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- fix the bug where removing an item from a day also opens the detailed view.
+- some better interface for showing the recipies.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

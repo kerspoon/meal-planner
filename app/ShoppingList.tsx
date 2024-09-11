@@ -16,7 +16,7 @@ export const ShoppingList = ({ meals }: { meals: WeekMeals }) => {
       newCheckedItems[item.name] = false;
     });
     setCheckedItems(newCheckedItems);
-  }, [meals]);
+  }, [meals, shoppingList]);
 
   const toggleItem = (itemName: string) => {
     setCheckedItems(prev => ({

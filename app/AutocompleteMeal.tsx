@@ -6,11 +6,10 @@ import recipes from '@/lib/recipes';
 
 type AutocompleteMealProps = {
     day: DaysOfWeek;
-    meals: WeekMeals;
     setMeals: React.Dispatch<React.SetStateAction<WeekMeals>>;
   };
 
-export const AutocompleteMeal = ({ day, meals, setMeals }: AutocompleteMealProps) => {
+export const AutocompleteMeal = ({ day, setMeals }: AutocompleteMealProps) => {
   const [input, setInput] = useState('');
   const [suggestions, setSuggestions] = useState<Recipe[]>([]);
 

@@ -44,7 +44,7 @@ export const DayPlanner = ({ day, meals, setMeals, onRecipeClick }: {
         onDrop={onDrop}
         className="min-h-[200px] border-2 border-dashed border-gray-300 p-4"
       >
-        <AutocompleteMeal day={day} meals={meals} setMeals={setMeals} />
+        <AutocompleteMeal day={day} setMeals={setMeals} />
         {meals[day]?.map((meal, index: number) => (
           <div key={index} className={`flex justify-between items-center mb-2 mt-2 p-2 rounded cursor-pointer ${mealColors[meal.type]}`} onClick={() => {onRecipeClick(meal.id)}}>
             <span>{meal.name}</span>
