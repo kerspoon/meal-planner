@@ -1,12 +1,6 @@
-type FODMAPLevel = 'Low' | 'Moderate' | 'High';
+import { FODMAPIngredient } from "./types";
 
-interface Ingredient {
-  name: string;
-  fodmapLevel?: FODMAPLevel;
-  fodmapNotes?: string;
-}
-
-type IngredientDatabase = Record<string, Ingredient[]>;
+type IngredientDatabase = Record<string, FODMAPIngredient[]>;
 
 export const categories: IngredientDatabase = {
   "Fruits": [
@@ -860,6 +854,23 @@ Object.entries(categories).forEach(([category, ingredients]) => {
 
 export const getCategoryForIngredient = (ingredientName: string) => {
   return ingredientCategories[ingredientName.toLowerCase()] || "Miscellaneous";
+};
+
+
+// this is a slow mess, format the data better so it can just be a lookup by name as an index.
+export const getIngredientInfo = (ingredientName: string) => {
+  const category = getCategoryForIngredient(ingredientName);
+  const ing = categories[category].find(ingredient => ingredient.name === ingredientName); 
+  if (!ing) {
+    return {
+      category,
+      name: ingredientName,
+    };
+  }
+  return {
+    ...ing,
+    category
+  };
 };
 
 // test('getCatagoryForIngredient', () => {

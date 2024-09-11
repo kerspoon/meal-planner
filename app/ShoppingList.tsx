@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { WeekMeals } from "@/lib/types";
 import { generateShoppingList } from '@/lib/RecipeHelpers';
+import { colorFodmap } from '@/lib/utils';
 
 export const ShoppingList = ({ meals }: { meals: WeekMeals }) => {
   type CheckedItems = Record<string, boolean>;
@@ -40,8 +41,11 @@ export const ShoppingList = ({ meals }: { meals: WeekMeals }) => {
                   key={index} 
                   className="flex justify-between items-start mb-2 pb-2 border-b cursor-pointer"
                   onClick={() => toggleItem(item.name)}
+                  title={item.fodmapNotes}
                 >
-                  <span className={`font-medium ${checkedItems[item.name] ? 'line-through text-gray-400' : ''}`}>
+                  <span 
+                  className={`font-medium ${colorFodmap(item.fodmapLevel)} ${checkedItems[item.name] ? 'line-through' : ''}`}
+                  >
                     {item.name}
                   </span>
                   <div className="text-right">

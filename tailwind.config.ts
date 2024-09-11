@@ -11,7 +11,11 @@ const config: Config = {
 		'bg-yellow-200',
 		'bg-green-200',
 		'bg-blue-200',
-		'bg-purple-200'
+		'bg-purple-200',
+		'text-red-500',
+		'text-yellow-500',
+		'text-green-500',
+		'text-gray-500'
 	],
 	theme: {
 		extend: {

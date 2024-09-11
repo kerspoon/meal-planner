@@ -1,5 +1,21 @@
+import { getIngredientInfo } from "@/lib/foodCategories";
 import recipes from "@/lib/recipes";
+import { Ingredient } from "@/lib/types";
+import { colorFodmap, fmt2dp } from "@/lib/utils";
 import ReactMarkdown from 'react-markdown';
+
+const IngredientDetail = (ingredient: Ingredient) => {
+  const info = getIngredientInfo(ingredient.name);
+  if (!info) {
+    return <div>{ingredient.name}</div>;
+  }
+  return (
+    <tr key={ingredient.name}>
+      <td>{fmt2dp(ingredient.quantity[1])} {ingredient.quantity[0]}</td>
+      <td className={`${colorFodmap(info.fodmapLevel)}`} title={info.fodmapNotes}>{ingredient.name}</td>
+    </tr>
+  );
+};
 
 export const RecipeDetail = ({ id }: { id: number }) => {
   // get the recipe from the global recipes array
@@ -19,12 +35,7 @@ export const RecipeDetail = ({ id }: { id: number }) => {
           <h3 className="text-lg font-bold mb-2">Ingredients</h3>
           <ul>
             <table className="w-full">
-              {recipe.ingredients.map(ingredient => (
-                <tr key={ingredient.name}>
-                  <td>{ingredient.quantity[1]} {ingredient.quantity[0]}</td>
-                  <td>{ingredient.name}</td>
-                </tr>
-              ))}
+              {recipe.ingredients.map(IngredientDetail)}
             </table>
           </ul>
         </div>

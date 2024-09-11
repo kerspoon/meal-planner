@@ -7,5 +7,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 # to do
 
-- highlight in red/yellow/green every ingredient that is on FODMAP list. 
 - some better interface for showing the recipies.
