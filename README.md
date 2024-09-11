@@ -8,6 +8,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 # to do
 
 - fix the bug where removing an item from a day also opens the detailed view.
+- highlight in red/yellow/green every ingredient that is on FODMAP list. 
 - some better interface for showing the recipies.
-
-

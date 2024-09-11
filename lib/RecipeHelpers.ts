@@ -1,4 +1,4 @@
-import { catagoryNames, getCatagoryForIngredient } from './foodCategories';
+import { catagoryNames, getCategoryForIngredient } from './foodCategories';
 import { WeekMeals, ShoppingList, IngredientQuantity } from './types';
 
 // combineQuantities: Combines quantities of the same unit into a single quantity
@@ -76,7 +76,7 @@ export const generateShoppingList = (meals: WeekMeals) => {
     Object.entries(ingredients).forEach(([name, quantities]) => {
       const combined = combineQuantities(quantities);
       const formattedQuantities = formatCombinedQuantities(combined);
-      const category = getCatagoryForIngredient(name);
+      const category = getCategoryForIngredient(name);
       categories[category].push({ name, quantities: formattedQuantities });
     });
 

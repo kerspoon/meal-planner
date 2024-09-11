@@ -207,40 +207,6 @@ Note: Don't panic if it looks like there's too much liquid in the tin after the 
     `
   },
   {
-    id: 8,
-    name: "All-in-One Sticky Rice with Broccoli, Squash, Chilli & Ginger",
-    type: MealType.Dinner,
-    ingredients: [
-      { name: "jasmine rice", quantity: ["g", 150] },
-      { name: "coconut milk", quantity: ["ml", 400] },
-      { name: "soy sauce", quantity: ["tbsp", 1] },
-      { name: "ginger", quantity: ["cm", 2.5] },
-      { name: "garlic", quantity: ["cloves", 1] },
-      { name: "squash", quantity: ["g", 300] },
-      { name: "broccoli", quantity: ["g", 300] },
-      { name: "cashews", quantity: ["g", 30] },
-      { name: "sesame oil", quantity: ["tbsp", 2] },
-      { name: "lime juice", quantity: ["tbsp", 2] },
-      { name: "soy sauce", quantity: ["tbsp", 2] },
-      { name: "ginger", quantity: ["cm", 2.5] },
-      { name: "red chillies", quantity: ["", 1] },
-      { name: "coriander", quantity: ["g", 20] }
-    ],
-    instructions: `
-1. Preheat the oven to 180°C fan/200°C/gas 6.
-
-2. Mix the rice, coconut milk, soy sauce, ginger and garlic in a small roasting tin and top with the squash. Cover tightly with foil, then transfer to the oven and cook for 45 minutes.
-
-3. Top the rice and squash with the broccoli, then re-cover and return to the oven for a final 15 minutes. Pop the cashew nuts into the oven on a small tray to toast at the same time.
-
-4. Mix together the oil, lime juice, soy sauce, ginger, chilli and coriander, adjusting the soy and lime juice to taste.
-
-5. Tip the dressing over the hot broccoli, rice and squash, scatter with the toasted cashews and serve hot.
-
-Note: Deseed the chilli if you prefer a less hot dressing.
-        `
-  },
-  {
     id: 9,
     name: "All-in-One Sticky Rice with Broccoli, Squash, Chilli & Ginger",
     type: MealType.Dinner,
