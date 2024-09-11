@@ -31,11 +31,17 @@ export const fmt2dp = formatter2dp.format;
 export function useLocalStorage<T>(key: string, fallbackValue: T): [T, Dispatch<SetStateAction<T>>] {
 
   const [value, setValue] = useState<T>(() => {
+    if (typeof window === 'undefined') {
+      return fallbackValue;
+    }
     const stored = localStorage.getItem(key);
     return stored ? JSON.parse(stored) : fallbackValue;
   });
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
     localStorage.setItem(key, JSON.stringify(value));
   }, [key, value]);
 

@@ -12,7 +12,7 @@ const IngredientDetail = (ingredient: Ingredient) => {
   return (
     <tr key={ingredient.name}>
       <td>{fmt2dp(ingredient.quantity[1])} {ingredient.quantity[0]}</td>
-      <td className={`${colorFodmap(info.fodmapLevel)}`} title={info.fodmapNotes}>{ingredient.name}</td>
+      <td className={`${colorFodmap(info.fodmapLevel, false)}`} title={info.fodmapNotes}>{ingredient.name}</td>
     </tr>
   );
 };
