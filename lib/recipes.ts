@@ -1071,6 +1071,285 @@ Low FODMAP options:
 Whole-grain spaghetti is high in fructans. Reduce to ½ cup cooked per serving for FODMAP friendly, or use an alternative pasta option, like quinoa.
 Garlic is high in fructans. Omit and sub 1 teaspoon garlic-infused olive oil (see page 246) for the sausage and 2 teaspoons for the pesto.
 The cashews in the cashew cream are high in GOS and have moderate fructans. Omit the cashew cream if sensitive.`
+  },
+  {
+    id: 39,
+    name: "Salmon, Rice and Steamed Veg",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "salmon fillet", quantity: ["g", 300] },
+      { name: "brown rice", quantity: ["cup", 1] },
+      { name: "broccoli", quantity: ["g", 100] },
+      { name: "carrots", quantity: ["", 1] },
+      { name: "lemon", quantity: ["", 0.5] },
+      { name: "olive oil", quantity: ["tbsp", 1] },
+      { name: "salt", quantity: ["tsp", 0.5] },
+      { name: "black pepper", quantity: ["tsp", 0.25] }
+    ],
+    instructions: `
+  1. Cook the brown rice according to package instructions.
+  2. While the rice is cooking, prepare the vegetables:
+     - Cut the broccoli into florets
+     - Peel and slice the carrot
+  3. Steam the vegetables for about 5-7 minutes until tender but still crisp.
+  4. Season the salmon fillet with salt and pepper.
+  5. Heat olive oil in a pan over medium-high heat.
+  6. Cook the salmon for about 4-5 minutes on each side, or until cooked through.
+  7. Serve the salmon over the rice, with the steamed vegetables on the side.
+  8. Squeeze lemon juice over the salmon and vegetables before serving.
+    `
+  },
+  {
+    id: 40,
+    name: "Egg Fried Rice",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "rice", quantity: ["cup", 1] },
+      { name: "eggs", quantity: ["", 2] },
+      { name: "olive oil", quantity: ["tbsp", 2] },
+      { name: "soy sauce", quantity: ["tbsp", 1] },
+      { name: "frozen peas", quantity: ["cup", 0.5] },
+      { name: "onions", quantity: ["", 2] },
+      { name: "garlic", quantity: ["clove", 1] },
+      { name: "salt", quantity: ["tsp", 0.5] },
+      { name: "black pepper", quantity: ["tsp", 0.25] }
+    ],
+    instructions: `
+  1. Beat the eggs in a small bowl and set aside.
+  2. Heat 1 tablespoon of oil in a large skillet or wok over medium-high heat.
+  3. Add beaten eggs and scramble until cooked. Remove from the pan and set aside.
+  4. In the same pan, heat the remaining oil.
+  5. Add minced garlic and diced carrots, stir-fry for 2 minutes.
+  6. Add frozen peas and cook for another 2 minutes.
+  7. Add the cooked rice, breaking up any clumps.
+  8. Stir in soy sauce, salt, and pepper.
+  9. Add the scrambled eggs and chopped green onions.
+  10. Stir-fry everything together for 3-4 minutes until well combined and heated through.
+  11. Serve hot.
+    `
+  },
+  {
+    id: 41,
+    name: "Kedgeree",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "haddock fillets", quantity: ["g", 680] },
+      { name: "eggs", quantity: ["", 2] },
+      { name: "butter", quantity: ["g", 50] },
+      { name: "fresh ginger", quantity: ["cm", 2.5] },
+      { name: "onion", quantity: ["", 1] },
+      { name: "garlic", quantity: ["clove", 1] },
+      { name: "curry powder", quantity: ["tbsp", 2] },
+      { name: "mustard seeds", quantity: ["tbsp", 1] },
+      { name: "rice", quantity: ["cup", 2] },
+      { name: "tomatoes", quantity: ["", 2] },
+      { name: "lemons", quantity: ["", 2] },
+      { name: "fresh red chilli", quantity: ["", 1] },
+      { name: "fresh coriander", quantity: ["g", 20] },
+      { name: "plain yoghurt", quantity: ["cup", 0.5] },
+      { name: "salt", quantity: ["tsp", 1] }
+    ],
+    instructions: `
+  1. Boil the haddock fillets and eggs. Cook the eggs for 7 minutes for hard-boiled. Cook the fish for about 8-10 minutes until it flakes easily.
+  2. While these are cooking, prepare the spicy butter:
+     - Melt the butter in a large pan
+     - Add grated ginger, finely chopped onion, and minced garlic
+     - Stir in curry powder, mustard seeds, and salt
+     - Cook for 5 minutes until the onion is soft
+  3. Add rice to the pan with the spicy butter and stir to coat
+  4. Add chopped tomatoes, juice of 2 lemons, and finely chopped chilli
+  5. Cook rice according to package instructions
+  6. Once everything is cooked, flake the fish and peel and quarter the eggs
+  7. Mix the fish and eggs into the rice mixture
+  8. Serve with a mix of fresh coriander leaves and plain yoghurt on top
+    `
+  },
+  {
+    id: 42,
+    name: "Ratatouille",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "red onions", quantity: ["", 2] },
+      { name: "garlic cloves", quantity: ["", 4] },
+      { name: "aubergines", quantity: ["", 2] },
+      { name: "courgettes", quantity: ["", 3] },
+      { name: "red or yellow peppers", quantity: ["", 3] },
+      { name: "ripe tomatoes", quantity: ["", 6] },
+      { name: "tinned tomatoes", quantity: ["g", 400] },
+      { name: "basil", quantity: ["g", 15] },
+      { name: "olive oil", quantity: ["tbsp", 4] },
+      { name: "thyme", quantity: ["sprig", 3] },
+      { name: "balsamic vinegar", quantity: ["tbsp", 1] },
+      { name: "lemon", quantity: ["", 0.5] },
+      { name: "salt", quantity: ["tsp", 1] },
+      { name: "black pepper", quantity: ["tsp", 0.5] }
+    ],
+    instructions: `
+  1. Preheat the oven to 200°C/400°F.
+  2. Prepare the vegetables:
+     - Peel and cut the onions into wedges
+     - Peel and slice the garlic
+     - Cut the aubergines, courgettes, and peppers into 2.5cm chunks
+     - Quarter the tomatoes
+  3. Place all the vegetables in a large roasting tin.
+  4. Add the tinned tomatoes, breaking them up with your hands.
+  5. Add the basil leaves, thyme sprigs, and a good drizzle of olive oil.
+  6. Season with salt and pepper, then toss everything together.
+  7. Roast for 30-40 minutes, or until the vegetables are soft and slightly caramelized.
+  8. Remove from the oven and stir in the balsamic vinegar.
+  9. Squeeze over the lemon juice and adjust seasoning if needed.
+  10. Serve hot or at room temperature.
+    `
+  },{
+    id: 43,
+    name: "Fish Pie",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "potatoes", quantity: ["kg", 1.5] },
+      { name: "unsalted butter", quantity: ["g", 50] },
+      { name: "cornflour", quantity: ["tsp", 2] },
+      { name: "milk", quantity: ["ml", 350] },
+      { name: "Cheddar cheese", quantity: ["g", 100] },
+      { name: "Dijon mustard", quantity: ["tsp", 1] },
+      { name: "bullion powder", quantity: ["tsp", 1] },
+      { name: "mixed fish (white fish, salmon, haddock)", quantity: ["g", 700] },
+      { name: "greens (spinach, kale)", quantity: ["g", 200] },
+      { name: "salt", quantity: ["tsp", 1] },
+      { name: "black pepper", quantity: ["tsp", 0.5] }
+    ],
+    instructions: `
+  1. Preheat the oven to 200°C/400°F.
+  2. Boil 1.5 kg potatoes until tender, then drain and set aside.
+  3. Create the white sauce:
+     - Melt 50g unsalted butter in a saucepan
+     - Stir in 2 heaped teaspoons of cornflour
+     - Gradually add 350ml semi-skimmed milk, stirring constantly
+     - Add grated Cheddar cheese, 1 heaped teaspoon Dijon mustard, and bullion powder
+     - Stir until smooth and thickened
+  4. Mash the potatoes with a little of the white sauce.
+  5. In a casserole dish, layer:
+     - 700g mixed fish (combination of white fish, salmon, and haddock)
+     - 200g greens (spinach, kale, etc.)
+     - The white sauce
+     - Top with the mashed potatoes
+  6. Sprinkle additional cheese on top if desired.
+  7. Bake for 30-45 minutes until golden and bubbling. 
+  8. Grill the top for a few minutes for extra crispiness.
+    `
+  },
+  {
+    id: 44,
+    name: "Home-made Burgers and Chips",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "mince beef", quantity: ["g", 500] },
+      { name: "onion", quantity: ["", 1] },
+      { name: "cornflour", quantity: ["tsp", 2] },
+      { name: "garlic", quantity: ["clove", 2] },
+      { name: "egg", quantity: ["", 1] },
+      { name: "Worcestershire sauce", quantity: ["tbsp", 1] },
+      { name: "salt", quantity: ["tsp", 1] },
+      { name: "black pepper", quantity: ["tsp", 0.5] },
+      { name: "potatoes", quantity: ["kg", 1] },
+      { name: "vegetable oil", quantity: ["tbsp", 2] },
+      { name: "paprika", quantity: ["tsp", 1] },
+      { name: "frozen peas", quantity: ["g", 200] }
+    ],
+    instructions: `
+
+  For the chips:
+  1. Preheat the oven to 200°C/400°F.
+  2. Cut potatoes into chip shapes or cubes.
+  4. Toss the chips with vegetable oil, salt, and paprika.
+  5. Spread on a baking sheet and bake for 25-30 minutes, turning halfway, until golden and crispy.
+
+  For the burgers:
+  1. Mix beef, finely chopped onion, minced garlic, egg, cornflour, Worcestershire sauce, salt, and pepper in a bowl.
+  2. Form into 4 patties.
+  3. Cook in a hot pan or grill for about 4-5 minutes each side, or until cooked to your liking.
+
+    `
+  },
+  {
+    id: 45,
+    name: "Spaghetti Bolognese",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "spaghetti", quantity: ["g", 400] },
+      { name: "mince beef", quantity: ["g", 500] },
+      { name: "onion", quantity: ["", 1] },
+      { name: "garlic", quantity: ["clove", 2] },
+      { name: "carrot", quantity: ["", 1] },
+      { name: "celery", quantity: ["stalk", 1] },
+      { name: "tinned tomatoes", quantity: ["g", 400] },
+      { name: "tomato paste", quantity: ["tbsp", 2] },
+      { name: "stock", quantity: ["ml", 200] },
+      { name: "red wine", quantity: ["ml", 100] },
+      { name: "dried oregano", quantity: ["tsp", 1] },
+      { name: "olive oil", quantity: ["tbsp", 2] },
+      { name: "salt", quantity: ["tsp", 1] },
+      { name: "black pepper", quantity: ["tsp", 0.5] },
+      { name: "Parmesan cheese", quantity: ["g", 50] }
+    ],
+    instructions: `
+  1. Heat olive oil in a large pan over medium heat.
+  2. Add finely chopped onion, garlic, carrot, and celery. Cook until softened.
+  3. Add beef and cook until browned.
+  4. Stir in tomato paste, canned tomatoes, beef stock, red wine, and oregano.
+  5. Simmer for 30-40 minutes, stirring occasionally, until sauce thickens.
+  6. Meanwhile, cook spaghetti according to package instructions.
+  7. Season the bolognese sauce with salt and pepper to taste.
+  8. Drain the pasta and add it to the sauce, tossing to combine.
+  9. Serve hot, topped with grated Parmesan cheese.
+    `
+  },
+  {
+    id: 46,
+    name: "Sausage Casserole",
+    type: MealType.Dinner,
+    ingredients: [
+      { name: "sausages (beef or vegetarian)", quantity: ["", 8] },
+      { name: "onions", quantity: ["", 2] },
+      { name: "garlic", quantity: ["clove", 2] },
+      { name: "carrots", quantity: ["", 2] },
+      { name: "celery", quantity: ["stalk", 2] },
+      { name: "red peppers", quantity: ["", 1] },
+      { name: "tinned tomatoes", quantity: ["g", 400] },
+      { name: "stock", quantity: ["ml", 300] },
+      { name: "tomato paste", quantity: ["tbsp", 2] },
+      { name: "Worcestershire sauce", quantity: ["tbsp", 1] },
+      { name: "thyme", quantity: ["tsp", 1] },
+      { name: "rosemary", quantity: ["tsp", 1] },
+      { name: "olive oil", quantity: ["tbsp", 2] },
+      { name: "salt", quantity: ["tsp", 1] },
+      { name: "black pepper", quantity: ["tsp", 0.5] },
+      { name: "tinned beans", quantity: ["tins", 2] }
+    ],
+    instructions: `
+  1. Preheat the oven to 180°C/350°F.
+  
+  2. Heat olive oil in a large, oven-safe casserole dish over medium heat.
+  
+  3. Add the sausages and cook until browned on all sides. Remove and set aside.
+  
+  4. In the same dish, add chopped onions, minced garlic, sliced carrots, chopped celery, and diced red bell pepper. Cook for 5-7 minutes until softened.
+  
+  5. Stir in tomato paste and cook for another minute.
+  
+  6. Add canned tomatoes, stock, Worcestershire sauce, thyme, rosemary, and bay leaf. Bring to a simmer.
+  
+  7. Return the sausages to the dish and add the drained beans.
+  
+  8. Season with salt and pepper to taste.
+  
+  9. Cover the dish and transfer to the preheated oven.
+  
+  10. Bake for 30-35 minutes until the sausages are cooked through and the vegetables are tender.
+  
+  11. Remove the bay leaf before serving.
+  
+  12. Serve hot, optionally with crusty bread or over mashed potatoes.
+    `
   }
 ];
 
