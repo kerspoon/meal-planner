@@ -1,3 +1,4 @@
+// Not used but kept for reference
 
 type FODMAPLevel = 'Low' | 'Moderate' | 'High';
 
@@ -14,7 +15,7 @@ interface FODMAPFood {
   }[];
 }
 
-export const fodmapDatabase: FODMAPFood[] = [
+const fodmapDatabase: FODMAPFood[] = [
 
   // fodmap_grains
   {

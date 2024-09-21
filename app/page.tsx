@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DaysOfWeek, WeekMeals } from "@/lib/types";
+import { DaysOfWeek, WeekMeals } from "@/lib/db";
 import { ShoppingList } from '@/app/ShoppingList';
 import { RecipeList } from '@/app/RecipeList';
 import { DayPlanner } from '@/app/DayPlanner';

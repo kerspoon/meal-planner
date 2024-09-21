@@ -1,30 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { WeekMeals } from "@/lib/types";
+import { WeekMeals, IngredientCategory, FODMAPLevel } from '@/lib/db';
 import { generateShoppingList } from '@/lib/RecipeHelpers';
-import { colorFodmap, useLocalStorage } from '@/lib/utils';
+import { colorFodmap } from '@/lib/utils';
 
 export const ShoppingList = ({ meals }: { meals: WeekMeals }) => {
-  type CheckedItems = Record<string, boolean>;
-  const [checkedItems, setCheckedItems] = useLocalStorage<CheckedItems>("checkedItems",{});
-  
-  const shoppingList = generateShoppingList(meals);
+  const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
 
-  useEffect(() => {
-    // Initialize checkedItems state when meals changes
-    const newCheckedItems: CheckedItems = {};
-    Object.values(generateShoppingList(meals)).flat().forEach(item => {
-      newCheckedItems[item.name] = false;
-    });
-    setCheckedItems(newCheckedItems);
-  }, [meals]);
+  const shoppingList = useMemo(() => generateShoppingList(meals), [meals]);
 
   const toggleItem = (itemName: string) => {
-    setCheckedItems(prev => ({
-      ...prev,
-      [itemName]: !prev[itemName]
-    }));
+    setCheckedItems(prev => ({ ...prev, [itemName]: !prev[itemName] }));
   };
+
+  const groupedItems = useMemo(() => {
+    const grouped: { [key in IngredientCategory]?: typeof shoppingList } = {};
+    for (const item of shoppingList) {
+      if (!grouped[item.category as IngredientCategory]) {
+        grouped[item.category as IngredientCategory] = [];
+      }
+      grouped[item.category as IngredientCategory]!.push(item);
+    }
+    return grouped;
+  }, [shoppingList]);
 
   return (
     <Card>
@@ -32,33 +30,35 @@ export const ShoppingList = ({ meals }: { meals: WeekMeals }) => {
         <CardTitle>Shopping List</CardTitle>
       </CardHeader>
       <CardContent>
-        {Object.entries(shoppingList).map(([category, items]) => (
-          items.length > 0 && (
-            <div key={category} className="mb-4">
+        {Object.entries(groupedItems).map(([category, items]) => (
+          <div key={category} className="mb-4">
               <h3 className="font-bold text-lg mb-2">{category}</h3>
               {items.map((item, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex justify-between items-start mb-2 pb-2 border-b cursor-pointer"
-                  onClick={() => toggleItem(item.name)}
-                  title={item.fodmapNotes}
+                  onClick={() => toggleItem(item.ingredient.name)}
+                  title={item.ingredient.fodmap_comment}
                 >
-                  <span 
-                  className={`font-medium ${colorFodmap(item.fodmapLevel, checkedItems[item.name])} ${checkedItems[item.name] ? 'line-through' : ''}`}
+                  <span
+                    className={`font-medium ${colorFodmap(item.ingredient.fodmap, checkedItems[item.ingredient.name])} ${
+                      checkedItems[item.ingredient.name] ? 'line-through' : ''
+                    }`}
                   >
-                    {item.name}
+                    {item.ingredient.name}
                   </span>
                   <div className="text-right">
-                    {item.quantities.map((qty, i) => (
-                      <div key={i} className={`text-sm ${checkedItems[item.name] ? 'line-through text-gray-400' : 'text-gray-600'}`}>
-                        {qty}
-                      </div>
-                    ))}
+                    <div
+                      className={`text-sm ${
+                        checkedItems[item.ingredient.name] ? 'line-through text-gray-400' : 'text-gray-600'
+                      }`}
+                    >
+                      {item.quantity} {item.units}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
-          )
         ))}
       </CardContent>
     </Card>

@@ -24,17 +24,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 # dont do
 
-- fix the data format of the recipies etc. (this wont help unless I *need* to do the other "don't do" things.)
-    ```
-    const recipiesDb = {
-      1: { name: "", catagory: 1, ingrediends: [{id: 1, quantity: 400, units: "g", details: "chopped"}, instructions: "", photos: ["asgid.png"]] }
-    }
-    const recipies_idx_name = {
-        "Egg Fried Rice": 1
-    }
-    const ingredients = {
-        1: { name: "", fodmap: 1, fodmap_comment: ""}
-    }
-    ```
 - add a simple backend using sqlite or similar.
 - make multi user. storing recipies and weekly meals and shopping list ticks.

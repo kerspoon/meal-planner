@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { mealColors, Recipe, DaysOfWeek, WeekMeals } from "@/lib/types";
+import { Recipe, DaysOfWeek, WeekMeals, getRecipeById } from "@/lib/db";
 import { AutocompleteMeal } from "@/app/AutocompleteMeal";
 import { Button } from "@/components/ui/button";
-import recipes from '@/lib/recipes';
+import { mealColors } from '@/lib/utils';
 
 export const DayPlanner = ({ day, meals, setMeals, onRecipeClick }: { 
   day: DaysOfWeek, 
@@ -18,7 +18,7 @@ export const DayPlanner = ({ day, meals, setMeals, onRecipeClick }: {
 
   const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
     const recipeId = e.dataTransfer.getData('recipeId');
-    const recipe = recipes.find((r: Recipe) => r.id === parseInt(recipeId));
+    const recipe = getRecipeById(parseInt(recipeId));
     if (recipe) {
       setMeals((prevMeals: WeekMeals) => ({
         ...prevMeals,
@@ -49,7 +49,7 @@ export const DayPlanner = ({ day, meals, setMeals, onRecipeClick }: {
       >
         <AutocompleteMeal day={day} setMeals={setMeals} />
         {meals[day]?.map((meal, index: number) => (
-          <div key={index} className={`flex justify-between items-center mb-2 mt-2 p-2 rounded cursor-pointer ${mealColors[meal.type]}`} onClick={() => {onRecipeClick(meal.id)}}>
+          <div key={index} className={`flex justify-between items-center mb-2 mt-2 p-2 rounded cursor-pointer ${mealColors[meal.category]}`} onClick={() => {onRecipeClick(meal.id)}}>
             <span>{meal.name}</span>
             <div>
               <Button variant="ghost" size="sm" onClick={(e) => {

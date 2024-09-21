@@ -1,23 +1,26 @@
 import { clsx, type ClassValue } from "clsx"
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge"
+import { MealType } from "./db";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export const mealColors: Record<MealType, string> = {
+  breakfast: 'bg-yellow-200',
+  lunch: 'bg-green-200',
+  dinner: 'bg-blue-200',
+  dessert: 'bg-purple-200'
+};
 
 export const colorFodmap = (fodmapLevel: string | undefined, checked: boolean) => {
   if (checked) return 'text-gray-400';
   switch (fodmapLevel) {
-    case 'High':
-      return 'text-red-500';
-    case 'Moderate':
-      return 'text-yellow-500';
-    case 'Low':
-      return 'text-green-500';
-    default:
-      return 'text-gray-500';
+    case 'High': return 'text-red-500';
+    case 'Moderate': return 'text-yellow-500';
+    case 'Low': return 'text-green-500';
+    default: return 'text-gray-500';
   }
 }
 
