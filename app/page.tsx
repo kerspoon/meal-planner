@@ -9,6 +9,7 @@ import { DayPlanner } from '@/app/DayPlanner';
 import { RecipeDetail } from '@/app/RecipeDetail';
 import { Button } from '@/components/ui/button';
 import { useLocalStorage } from '@/lib/utils';
+import { RecipeEdit } from '@/app/RecipeEdit';
 
 const daysOfWeek = Object.values(DaysOfWeek);
 
@@ -24,13 +25,20 @@ const ComprehensiveMealPlanner = () => {
   });
 
   const [selectedRecipeId, setSelectedRecipeId] = useState<number | null>(null);
+  const [editingRecipeId, setEditingRecipeId] = useState<number | null>(null);
 
   const openRecipeDetail = (recipeId: number) => {
     if (selectedRecipeId === recipeId) {
       setSelectedRecipeId(null);
     } else {
       setSelectedRecipeId(recipeId);
+      setEditingRecipeId(null);
     }
+  };
+
+  const openRecipeEdit = (recipeId: number | null) => {
+    setEditingRecipeId(recipeId);
+    setSelectedRecipeId(null);
   };
 
   const closeRecipeDetail = () => {
@@ -45,6 +53,7 @@ const ComprehensiveMealPlanner = () => {
           <Card>
             <CardHeader>
               <CardTitle>Recipe List</CardTitle>
+              <Button onClick={() => openRecipeEdit(0)}>New Recipe</Button>
             </CardHeader>
             <CardContent>
               <RecipeList onRecipeClick={openRecipeDetail} />
@@ -55,16 +64,31 @@ const ComprehensiveMealPlanner = () => {
           {selectedRecipeId ? (
             <Card>
               <CardHeader>
-
-              </CardHeader>
-              <CardContent>
-
                 <CardTitle>Recipe Details</CardTitle>
                 <Button onClick={closeRecipeDetail} className="mb-4 float-right">Close</Button>
+                <Button onClick={() => openRecipeEdit(selectedRecipeId)} className="mb-4 float-right">Edit</Button>
+              </CardHeader>
+              <CardContent>
                 <RecipeDetail id={selectedRecipeId} />
               </CardContent>
             </Card>
-          ) : (<div></div>)}
+          ) : editingRecipeId !== null ? (
+            <Card>
+              <CardHeader>
+                <CardTitle>{editingRecipeId ? 'Edit Recipe' : 'New Recipe'}</CardTitle>
+                <Button onClick={() => setEditingRecipeId(null)} className="mb-4 float-right">Close</Button>
+              </CardHeader>
+              <CardContent>
+                <RecipeEdit
+                  recipeId={editingRecipeId === 0 ? undefined : editingRecipeId}
+                  onSave={() => {
+                    setEditingRecipeId(null);
+                    // Optionally, refresh your recipe list or other data here
+                  }}
+                />
+              </CardContent>
+            </Card>
+          ) : null}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {daysOfWeek.map(day => (
