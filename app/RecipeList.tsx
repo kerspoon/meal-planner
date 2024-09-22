@@ -1,12 +1,14 @@
 
-import recipes from "@/lib/recipes";
-import { mealColors, Recipe } from "@/lib/types";
+import { getRecipes, Recipe } from '@/lib/db';
+import { mealColors } from "@/lib/utils";
 
-
-export const RecipeList = ({onRecipeClick}: {onRecipeClick: (recipeId: number) => void}) => {
+export const RecipeList = ({ onRecipeClick }:
+  {
+    onRecipeClick: (recipeId: number) => void
+  }) => {
   return (
     <div className="grid grid-cols-1 gap-4">
-      {recipes.sort((a, b) => a.name.localeCompare(b.name)).map((recipe) => RenderRecipe(recipe, onRecipeClick))}
+      {getRecipes().map((recipe) => RenderRecipe(recipe, onRecipeClick))}
     </div>
   );
 };
@@ -28,10 +30,9 @@ const RenderRecipe = (recipe: Recipe, onRecipeClick: (recipeId: number) => void)
       draggable
       onDragStart={(e) => onDragStart(e, recipe.id)}
       onClick={() => onClick(recipe.id)}
-      className={`mb-2 p-2 rounded cursor-move ${mealColors[recipe.type]}`}
+      className={`mb-2 p-2 rounded cursor-move ${mealColors[recipe.category]}`}
     >
       {recipe.name}
     </div>
   )
 };
-

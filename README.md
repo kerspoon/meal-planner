@@ -18,3 +18,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 - some better interface for showing the recipies.
  + add a search bar the looks in the ingredients and the title
+- replace title as tooltip with an ⓘ &#9432 as a button that shows a div with the info.
+- add photos of the meals, then an interface to select a meal via a full screen grid of photos.
+- add the ability to add your own recipies. a simple copy paste of the JSON into a text box that adds to a list where you can delete too. Then add guidance for the genAI prompt. 
+
+# dont do
+
+- add a simple backend using sqlite or similar.
+- make multi user. storing recipies and weekly meals and shopping list ticks.

@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
-import { WeekMeals, Recipe, DaysOfWeek} from "@/lib/types";
-import recipes from '@/lib/recipes';
+import { DaysOfWeek, getRecipes, Recipe, WeekMeals } from '@/lib/db';
+
 
 type AutocompleteMealProps = {
     day: DaysOfWeek;
@@ -17,7 +17,7 @@ export const AutocompleteMeal = ({ day, setMeals }: AutocompleteMealProps) => {
     const value = e.target.value;
     setInput(value);
     if (value.length > 0) {
-      const filteredSuggestions = recipes.filter((recipe: Recipe) =>
+      const filteredSuggestions = getRecipes().filter((recipe: Recipe) =>
         recipe.name.toLowerCase().includes(value.toLowerCase())
       );
       setSuggestions(filteredSuggestions);

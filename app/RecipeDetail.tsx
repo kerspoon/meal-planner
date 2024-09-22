@@ -1,28 +1,28 @@
-import { getIngredientInfo } from "@/lib/foodCategories";
-import recipes from "@/lib/recipes";
-import { Ingredient } from "@/lib/types";
+import { getIngredientById, getRecipeById, RecipeIngredient } from "@/lib/db";
 import { colorFodmap, fmt2dp } from "@/lib/utils";
 import ReactMarkdown from 'react-markdown';
 
-const IngredientDetail = (ingredient: Ingredient) => {
-  const info = getIngredientInfo(ingredient.name);
+const IngredientDetail = (ingredient: RecipeIngredient) => {
+  const info = getIngredientById(ingredient.id);
   if (!info) {
-    return <div>{ingredient.name}</div>;
+    return <div>Ingredient not found, {ingredient.id}</div>;
   }
   return (
-    <tr key={ingredient.name}>
-      <td>{fmt2dp(ingredient.quantity[1])} {ingredient.quantity[0]}</td>
-      <td className={`${colorFodmap(info.fodmapLevel, false)}`} title={info.fodmapNotes}>{ingredient.name}</td>
+    <tr key={ingredient.id}>
+      <td>{fmt2dp(ingredient.quantity)} {ingredient.units}</td>
+      <td className={`${colorFodmap(info.fodmap, false)}`} title={info.fodmap_comment}>
+        {info.name} 
+        {ingredient.details ? `(${ingredient.details})` : ''}
+      </td>
     </tr>
   );
 };
 
 export const RecipeDetail = ({ id }: { id: number }) => {
-  // get the recipe from the global recipes array
-  const recipe = recipes.find(recipe => recipe.id === id);
+  const recipe = getRecipeById(id);
 
   if (!recipe) {
-    return <div>Recipe not found</div>;
+    return <div>Recipe not found, {id}</div>;
   }
   return (
     <div>
@@ -45,8 +45,6 @@ export const RecipeDetail = ({ id }: { id: number }) => {
           {<ReactMarkdown>{recipe.instructions}</ReactMarkdown>}
         </div>
       </div>
-
     </div>
   );
-
 };
