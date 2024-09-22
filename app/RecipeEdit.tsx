@@ -15,7 +15,7 @@ const recipeSchema = z.object({
     id: z.number().optional(),
     name: z.string().min(1, "Ingredient name is required"),
     quantity: z.number().min(0, "Quantity must be positive"),
-    units: z.string().min(1, "Unit is required"),
+    units: z.string().optional(),
     details: z.string().optional(),
   })),
   instructions: z.string().min(1, "Instructions are required"),

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DaysOfWeek, WeekMeals } from "@/lib/db";
+import { DaysOfWeek, removeRecipe, WeekMeals } from "@/lib/db";
 import { ShoppingList } from '@/app/ShoppingList';
 import { RecipeList } from '@/app/RecipeList';
 import { DayPlanner } from '@/app/DayPlanner';
@@ -45,6 +45,10 @@ const ComprehensiveMealPlanner = () => {
     setSelectedRecipeId(null);
   };
 
+  function deleteRecipe(selectedRecipeId: number): void {
+    removeRecipe(selectedRecipeId);
+  }
+
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Meal Planner</h1>
@@ -67,6 +71,7 @@ const ComprehensiveMealPlanner = () => {
                 <CardTitle>Recipe Details</CardTitle>
                 <Button onClick={closeRecipeDetail} className="mb-4 float-right">Close</Button>
                 <Button onClick={() => openRecipeEdit(selectedRecipeId)} className="mb-4 float-right">Edit</Button>
+                <Button onClick={() => deleteRecipe(selectedRecipeId)} className="mb-4 float-right">Delete</Button>
               </CardHeader>
               <CardContent>
                 <RecipeDetail id={selectedRecipeId} />
