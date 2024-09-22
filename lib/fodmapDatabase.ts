@@ -15,7 +15,7 @@ interface FODMAPFood {
   }[];
 }
 
-const fodmapDatabase: FODMAPFood[] = [
+export const fodmapDatabase: FODMAPFood[] = [
 
   // fodmap_grains
   {

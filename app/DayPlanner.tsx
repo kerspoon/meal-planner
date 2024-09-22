@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Recipe, DaysOfWeek, WeekMeals, getRecipeById } from "@/lib/db";
+import { DaysOfWeek, WeekMeals, getRecipeById } from "@/lib/db";
 import { AutocompleteMeal } from "@/app/AutocompleteMeal";
 import { Button } from "@/components/ui/button";
 import { mealColors } from '@/lib/utils';

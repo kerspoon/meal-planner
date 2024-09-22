@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { WeekMeals, IngredientCategory, FODMAPLevel } from '@/lib/db';
+import { WeekMeals, IngredientCategory } from '@/lib/db';
 import { generateShoppingList } from '@/lib/RecipeHelpers';
 import { colorFodmap } from '@/lib/utils';
 

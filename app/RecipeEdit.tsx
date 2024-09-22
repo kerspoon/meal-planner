@@ -32,7 +32,7 @@ interface RecipeEditProps {
 export const RecipeEdit: React.FC<RecipeEditProps> = ({ recipeId, onSave }) => {
   const [allIngredients, setAllIngredients] = useState<Ingredient[]>([]);
   
-  const { register, control, handleSubmit, setValue, watch, formState: { errors } } = useForm<RecipeFormData>({
+  const { register, control, handleSubmit, setValue, formState: { errors } } = useForm<RecipeFormData>({
     resolver: zodResolver(recipeSchema),
     defaultValues: {
       ingredients: [{ name: '', quantity: 0, units: '' }],
